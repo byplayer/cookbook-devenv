@@ -18,7 +18,9 @@ Attributes
 - `default['tmux']['install_method']`
     - `type` - string
     - `default` - source
-    - source/package. select install way. install using source or install using package.
+    - The accept values are `source` or `package`. select install way.
+      `source` - installing using source.
+      `package` - installing using package.
 
 - `default['tmux']['configure_options']` - The configure option for building tmux. Default value is
                                            %w(--prefix=/opt/tmux).
