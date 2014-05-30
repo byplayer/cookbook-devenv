@@ -1,23 +1,30 @@
 devenv Cookbook
 ===============
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This is cookbook for develop environment.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+This cookbook depends following cookbooks.
 
-e.g.
-#### packages
-- `toaster` - devenv needs toaster to brown your bagel.
+- tmux
+
+#### install environment
+- `tmux` - virtual window for console.
+
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
+| key                               | type   | description                                    | default|
+|:----------------------------------|--------|------------------------------------------------|-------:|
+| default['tmux']['install_method'] | string | source/package                                 | source |
+|                                   |        | select install way.                            |        |
+|                                   |        | install using source or install using package. |        |
+
+- `default['tmux']['configure_options']` - The configure option for building tmux. Default value is
+                                           %w(--prefix=/opt/tmux).
+
+
 #### devenv::default
 <table>
   <tr>
