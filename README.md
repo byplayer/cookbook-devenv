@@ -18,7 +18,7 @@ Attributes
 | key                               | type   | description                                    | default|
 |:----------------------------------|--------|------------------------------------------------|-------:|
 | default['tmux']['install_method'] | string | source/package                                 | source |
-|                                   |        | select install way.                            |        |
+|^|        | select install way.                            |        |
 |                                   |        | install using source or install using package. |        |
 
 - `default['tmux']['configure_options']` - The configure option for building tmux. Default value is
