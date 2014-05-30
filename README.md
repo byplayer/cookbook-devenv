@@ -15,9 +15,10 @@ This cookbook depends following cookbooks.
 Attributes
 ----------
 
-| key                               | type   | description                                    | default|
-|-----------------------------------|--------|------------------------------------------------|--------|
-| default['tmux']['install_method'] | string | source/package. select install way. install using source or install using package. | source |
+- `default['tmux']['install_method']`
+    - `type` - string
+    - `default` - source
+    - source/package. select install way. install using source or install using package.
 
 - `default['tmux']['configure_options']` - The configure option for building tmux. Default value is
                                            %w(--prefix=/opt/tmux).
