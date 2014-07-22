@@ -6,7 +6,9 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%w(devenv::_git
+
+%w(devenv::_locales
+   devenv::_git
    devenv::_packages).each do |recipe|
   include_recipe recipe
 end
