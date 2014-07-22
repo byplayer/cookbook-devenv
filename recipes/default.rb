@@ -6,8 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%(devenv::_git
-  devenv::_packages).each do |recipe|
+%w(devenv::_git
+   devenv::_packages).each do |recipe|
   include_recipe recipe
 end
 
