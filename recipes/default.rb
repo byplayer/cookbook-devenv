@@ -6,6 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-%w( tmux ).each do |cookbook|
+include_recipe 'devenv::_packages'
+
+%w(tmux).each do |cookbook|
   include_recipe cookbook
 end
