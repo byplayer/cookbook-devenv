@@ -6,8 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include_recipe 'devenv::_packages'
-include_recipe 'devenv::_git'
+%('devenv::_git'
+  'devenv::_packages').each do |recipe|
+  include_recipe recipe
+end
 
 %w(tmux).each do |cookbook|
   include_recipe cookbook

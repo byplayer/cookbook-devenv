@@ -16,7 +16,7 @@
   eblook lookup-el
   libgecode-dev
 ).each do |pkg|
-  apt_package pkg do
+  package pkg do
     action :install
   end
 end
