@@ -1,0 +1,40 @@
+# change prefix
+set-option -g prefix C-x
+bind C-x send-prefix
+unbind-key C-b
+
+# status
+set -g status-fg black
+set -g status-bg white
+set -g status-attr default
+set -g display-time 3000
+
+# command/message line colors
+set -g message-fg black
+set -g message-bg white
+set -g message-attr bright
+set -g pane-border-fg white
+set -g pane-active-border-fg white
+# set -g pane-active-border-bg black
+
+set-window-option -g mode-fg black
+set-window-option -g mode-bg white
+
+# select pane on mouse
+set-option -g mouse-select-pane on
+
+# sync clipboard
+# bind-key -temacs-copy M-w run "tmux save-buffer - | xclip -i"
+bind-key -t emacs-copy M-w copy-pipe "xclip -i -selection clipboard"
+bind-key ] run "tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer" 
+bind-key -n C-y run "tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer" 
+
+# split
+bind-key h split-window -h
+bind-key v split-window
+
+# remove some key
+unbind-key {
+unbind-key }
+unbind-key C-o
+

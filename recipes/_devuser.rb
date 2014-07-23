@@ -26,3 +26,11 @@ bash '.zshrc' do
     cp "#{devenv_user_home}/.zsh.d/example.zshrc" "#{devenv_user_home}/.zshrc"
   EOH
 end
+
+%w(
+  .dir_colors .globalrc .ctags .tmux.conf
+  .Xresources
+).each do |name|
+  template "#{devenv_user_home}/#{name}" do
+  end
+end
