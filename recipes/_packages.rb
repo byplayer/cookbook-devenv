@@ -13,6 +13,7 @@
   expect dkms
   eblook lookup-el
   libgecode-dev
+  python-sphinx python-pip
 ).each do |pkg|
   package pkg do
     action :install
