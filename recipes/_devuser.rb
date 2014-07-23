@@ -9,7 +9,7 @@ end
 
 # .zsh.d
 git "#{devenv_user_home}/.zsh.d" do
-  remote node['devenv']['zshd']['repo']
+  repository node['devenv']['zshd']['repo']
   reference node['devenv']['zshd']['ref']
   action :sync
 end
