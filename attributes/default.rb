@@ -7,7 +7,7 @@ default['devenv']['.zsh.d']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git
 default['devenv']['.zsh.d']['ref'] = 'master'
 default['devenv']['.zsh.d']['checkout_branch'] = 'local'
 
-default['devenv']['.emacs.d']['repo'] = 'https://byplayer@github.com/byplayer/dot.emacs.d.git'
+default['devenv']['.emacs.d']['repo'] = 'https://github.com/byplayer/dot.emacs.d.git'
 default['devenv']['.emacs.d']['ref'] = 'master'
 default['devenv']['.emacs.d']['checkout_branch'] = 'local'
 
