@@ -21,7 +21,7 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
-bash '.zshrc'
+bash '.zshrc' do
   code <<-EOH
     cp "#{devenv_user_home}/.zsh.d/example.zshrc" "#{devenv_user_home}/.zshrc"
   EOH
