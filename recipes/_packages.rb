@@ -11,7 +11,6 @@
   mlocate ssh
   libsqlite3-dev sqlite3
   expect dkms
-  silversearcher-ag
   eblook lookup-el
   libgecode-dev
 ).each do |pkg|
