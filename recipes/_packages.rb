@@ -11,7 +11,6 @@
   mlocate ssh
   libsqlite3-dev sqlite3
   expect dkms
-  ia32-libs
   silversearcher-ag
   eblook lookup-el
   libgecode-dev
