@@ -3,9 +3,13 @@ default['devenv']['user']['name'] = 'devuser'
 default['devenv']['user']['shell'] = '/usr/bin/zsh'
 default['devenv']['user']['password'] = '$1$HhgEQ4ug$CA4/Aqm.LDZuFvtAO4Qu8.' # openssl passwd -1 "devuser"
 
-default['devenv']['zshd']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git'
-default['devenv']['zshd']['ref'] = 'master'
-default['devenv']['zshd']['checkout_branch'] = 'local'
+default['devenv']['.zsh.d']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git'
+default['devenv']['.zsh.d']['ref'] = 'master'
+default['devenv']['.zsh.d']['checkout_branch'] = 'local'
+
+default['devenv']['.emacs.d']['repo'] = 'https://byplayer@github.com/byplayer/dot.emacs.d.git'
+default['devenv']['.emacs.d']['ref'] = 'master'
+default['devenv']['.emacs.d']['checkout_branch'] = 'local'
 
 # tmux
 default['tmux']['install_method'] = 'source'

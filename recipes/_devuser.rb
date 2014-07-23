@@ -9,12 +9,22 @@ end
 
 ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 
-# .zsh.d
-git "#{devenv_user_home}/.zsh.d" do
-  repository node['devenv']['zshd']['repo']
-  reference node['devenv']['zshd']['ref']
-  user node['devenv']['user']['name']
+# checkout configuration dirs
+%w(.zsh.d .emacs.d) do |name|
+  git "#{devenv_user_home}/#{name}" do
+    repository node['devenv'][name]['repo']
+    reference node['devenv'][name]['ref']
+    user node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    checkout_branch node['devenv'][name]['checkout_branch']
+    action :sync
+  end
+end
+
+file "#{devenv_user_home}/.zshrc" do
+  owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  checkout_branch node['devenv']['zshd']['checkout_branch']
-  action :sync
+  mode '0664'
+  content IO.read("#{devenv_user_home}/.zsh.d/example.zshrc")
+  action :create
 end
