@@ -13,6 +13,7 @@ end
 
 %w(devenv::_locales
    devenv::_git
-   devenv::_packages).each do |recipe|
+   devenv::_packages
+   devenv::_devuser).each do |recipe|
   include_recipe recipe
 end
