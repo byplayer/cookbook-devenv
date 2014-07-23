@@ -21,10 +21,8 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
-file "#{devenv_user_home}/.zshrc" do
-  owner node['devenv']['user']['name']
-  group node['devenv']['user']['name']
-  mode '0664'
-  content IO.read("#{devenv_user_home}/.zsh.d/example.zshrc")
-  action :create
+bash '.zshrc'
+  code <<-EOH
+    cp "#{devenv_user_home}/.zsh.d/example.zshrc" "#{devenv_user_home}/.zshrc"
+  EOH
 end
