@@ -5,6 +5,7 @@ default['devenv']['user']['password'] = '$1$HhgEQ4ug$CA4/Aqm.LDZuFvtAO4Qu8.' # o
 
 default['devenv']['zshd']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git'
 default['devenv']['zshd']['ref'] = 'master'
+default['devenv']['zshd']['checkout_branch'] = 'local'
 
 # tmux
 default['tmux']['install_method'] = 'source'
