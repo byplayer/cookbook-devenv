@@ -7,6 +7,8 @@ user node['devenv']['user']['name'] do
   supports manage_home: true
 end
 
+ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
+
 # .zsh.d
 git "#{devenv_user_home}/.zsh.d" do
   repository node['devenv']['zshd']['repo']
