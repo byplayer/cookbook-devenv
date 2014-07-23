@@ -27,15 +27,6 @@ bash '.zshrc' do
   EOH
 end
 
-bash 'compile js2-mode' do
-  cwd "#{devenv_user_home}/.emacs.d/elisp/js2-mode"
-  user node['devenv']['user']['name']
-  group node['devenv']['user']['name']
-  code <<-EOH
-    emacs --batch -f batch-byte-compile js2-mode.el
-  EOH
-end
-
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources
