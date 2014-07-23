@@ -28,7 +28,7 @@ bash '.zshrc' do
 end
 
 bash 'compile js2-mode' do
-  pwd "#{devenv_user_home}/.emacs.d/elisp/js2-mode"
+  cwd "#{devenv_user_home}/.emacs.d/elisp/js2-mode"
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
   code <<-EOH
