@@ -10,6 +10,6 @@ end
 # .zsh.d
 git "#{devenv_user_home}/.zsh.d" do
   repository node['devenv']['zshd']['repo']
-  reference node ['devenv']['zshd']['ref']
+  reference node['devenv']['zshd']['ref']
   action :sync
 end
