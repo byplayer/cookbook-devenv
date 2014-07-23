@@ -13,5 +13,6 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 git "#{devenv_user_home}/.zsh.d" do
   repository node['devenv']['zshd']['repo']
   reference node['devenv']['zshd']['ref']
+  user node['devenv']['user']['name']
   action :sync
 end
