@@ -14,6 +14,7 @@ git "#{devenv_user_home}/.zsh.d" do
   repository node['devenv']['zshd']['repo']
   reference node['devenv']['zshd']['ref']
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
   checkout_branch node['devenv']['zshd']['checkout_branch']
   action :sync
 end
