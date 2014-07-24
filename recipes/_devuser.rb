@@ -29,10 +29,30 @@ end
 
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
-  .Xresources .gitconfig
+  .Xresources .gitconfig .xprofile
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
     variables git_user_name: node['devenv']['git']['user_name'],
               git_user_email: node['devenv']['git']['user_email']
+    action :create
   end
+end
+
+# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
+directory '.gconf/apps/gnome-terminal/profiles/Default' do
+  owner node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  mode "0700"
+  recursive true
+  action :create
+end
+
+template "#{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml" do
+  source '.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb'
+  owner node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  mode "0700"
+  action :create
 end
