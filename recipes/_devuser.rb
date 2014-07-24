@@ -60,10 +60,10 @@ end
 end
 
 %W(
-  #{devenv_user_home}/.gconf/
-  #{devenv_user_home}/.gconf/gnome-terminal/
-  #{devenv_user_home}/.gconf/gnome-terminal/profiles/
-  #{devenv_user_home}/.gconf/gnome-terminal/profiles/Default/
+  #{devenv_user_home}/.gconf/apps
+  #{devenv_user_home}/.gconf/apps/gnome-terminal
+  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles
+  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default
 ).each do |dir|
   file File.join(dir, '%gconf.xml') do
     owner node['devenv']['user']['name']
