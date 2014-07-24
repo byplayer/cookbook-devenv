@@ -1,5 +1,5 @@
 %w(aptitude
-  gnome
+  gnome-terminal
   lubuntu-desktop zsh autotools-dev automake libtool
   libevent-dev libncurses5-dev zlib1g-dev libbz2-dev libyaml-dev
   libxml2-dev libxslt1-dev libreadline-dev xclip patch
