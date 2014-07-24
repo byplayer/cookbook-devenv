@@ -20,5 +20,5 @@ default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
 default['tmux']['version'] = '1.9a'
 
 # global
-default['global']['version'] = '6.3'
+default['global']['version'] = '6.2.9'
 default['global']['prefix'] = '/opt/global'
