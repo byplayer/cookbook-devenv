@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w(tmux apt timezone).each do |cookbook|
+%w(tmux apt timezone global).each do |cookbook|
   include_recipe cookbook
 end
 
