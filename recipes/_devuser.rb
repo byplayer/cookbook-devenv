@@ -33,6 +33,6 @@ end
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     variables git_user_name: node['devenv']['git']['user_name'],
-              git_user_email: node['devenv']['git']['user_name']
+              git_user_email: node['devenv']['git']['user_email']
   end
 end
