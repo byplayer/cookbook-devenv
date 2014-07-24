@@ -41,7 +41,7 @@ end
 end
 
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-%w(
+%W(
   #{devenv_user_home}/.gconf
   #{devenv_user_home}/.gconf/apps
   #{devenv_user_home}/.gconf/apps/gnome-terminal
