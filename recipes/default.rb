@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w(tmux apt timezone global rvm::user_install).each do |cookbook|
+%w(tmux apt timezone global rvm::user).each do |cookbook|
   include_recipe cookbook
 end
 
