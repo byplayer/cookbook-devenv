@@ -41,12 +41,20 @@ end
 end
 
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-directory "#{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default" do
-  owner node['devenv']['user']['name']
-  group node['devenv']['user']['name']
-  mode "0700"
-  recursive true
-  action :create
+%w(
+  #{devenv_user_home}/.gconf
+  #{devenv_user_home}/.gconf/apps
+  #{devenv_user_home}/.gconf/apps/gnome-terminal
+  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles
+  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default
+).each do |dir_name|
+  directory dir_name do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0700"
+    recursive true
+    action :create
+  end
 end
 
 template "#{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml" do
