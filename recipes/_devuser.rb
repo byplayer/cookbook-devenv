@@ -41,7 +41,7 @@ end
 end
 
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-directory '.gconf/apps/gnome-terminal/profiles/Default' do
+directory "#{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default" do
   owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
   mode "0700"
