@@ -10,7 +10,7 @@
 	cia = commit --amend
 	l = log
 	lo = log --oneline
-	lg = log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<%%an>%Creset' --abbrev-commit --date=short --branches
+	lg = log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<<%= puts '%' %>an>%Creset' --abbrev-commit --date=short --branches
 	dt = difftool
 	dc = diff --check
 	mt = mergetool
