@@ -18,3 +18,7 @@ default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 default['tmux']['install_method'] = 'source'
 default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
 default['tmux']['version'] = '1.9a'
+
+# global
+default['global']['version'] = '6.3'
+default['global']['prefix'] = '/opt/global'
