@@ -29,8 +29,10 @@ end
 
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
-  .Xresources
+  .Xresources .gitconfig
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
+    variables git_user_name: node['devenv']['git']['user_name'],
+              git_user_email: node['devenv']['git']['user_name']
   end
 end

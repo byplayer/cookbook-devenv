@@ -11,6 +11,9 @@ default['devenv']['.emacs.d']['repo'] = 'https://github.com/byplayer/dot.emacs.d
 default['devenv']['.emacs.d']['ref'] = 'master'
 default['devenv']['.emacs.d']['checkout_branch'] = 'local'
 
+default['devenv']['git']['user_name'] = 'devuser'
+default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
+
 # tmux
 default['tmux']['install_method'] = 'source'
 default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
