@@ -47,6 +47,8 @@ end
   #{devenv_user_home}/.gconf/apps/gnome-terminal
   #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles
   #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default
+  #{devenv_user_home}/.config
+  #{devenv_user_home}/.config/openbox
 ).each do |dir_name|
   directory dir_name do
     owner node['devenv']['user']['name']
@@ -61,6 +63,14 @@ template "#{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default/%gconf
   source '.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb'
   owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  mode "0700"
+  mode "0600"
+  action :create
+end
+
+template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
+  source '.config/openbox/lubuntu-rc.xml.erb'
+  owner node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  mode "0600"
   action :create
 end
