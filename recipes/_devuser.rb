@@ -88,3 +88,8 @@ template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
   mode "0600"
   action :create
 end
+
+group :sudo do
+  members ['vagrant', node['devenv']['user']['name']]
+  action [:create, :manage]
+end
