@@ -89,7 +89,7 @@ template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
   action :create
 end
 
-group :sudo do
+group 'sudo' do
   members ['vagrant', node['devenv']['user']['name']]
   action [:create, :manage]
 end
