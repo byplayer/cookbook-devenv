@@ -14,6 +14,6 @@
   include_recipe recipe
 end
 
-%w(tmux apt timezone global rvm::user).each do |cookbook|
+%w(tmux apt timezone global rvm::user docker).each do |cookbook|
   include_recipe cookbook
 end
