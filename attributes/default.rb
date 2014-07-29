@@ -14,6 +14,8 @@ default['devenv']['.emacs.d']['checkout_branch'] = 'local'
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
+default['devenv']['ssh_key_file'] = nil
+
 # tmux
 default['tmux']['install_method'] = 'source'
 default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
