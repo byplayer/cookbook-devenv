@@ -21,15 +21,9 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
-bash '.zshrc' do
-  code <<-EOH
-    cp "#{devenv_user_home}/.zsh.d/example.zshrc" "#{devenv_user_home}/.zshrc"
-  EOH
-end
-
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
-  .Xresources .gitconfig .xprofile
+  .Xresources .gitconfig .xprofile .zshrc
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     owner node['devenv']['user']['name']
