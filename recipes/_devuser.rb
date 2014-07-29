@@ -90,6 +90,13 @@ template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
 end
 
 if node['devenv']['user']['ssh_key_file']
+  directory "#{devenv_user_home}/.ssh" do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0755"
+    action :create
+  end
+
   file "#{devenv_user_home}/.ssh/id_rsa" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
