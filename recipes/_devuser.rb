@@ -89,12 +89,12 @@ template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
   action :create
 end
 
-if node['devenv']['ssh_key_file']
+if node['devenv']['user']['ssh_key_file']
   file "#{devenv_user_home}/.ssh/id_rsa" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
     mode "0600"
-    content File.open(node['devenv']['ssh_key_template']) { |f| f.read }
+    content File.open(node['devenv']['user']['ssh_key_file']) { |f| f.read }
     action :create
   end
 end
