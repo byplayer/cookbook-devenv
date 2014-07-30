@@ -23,3 +23,6 @@ default['tmux']['version'] = '1.9a'
 # global
 default['global']['version'] = '6.2.9'
 default['global']['prefix'] = '/opt/global'
+
+# updatedb
+default['updatedb']['locate_pkg'] = 'mlocate'
