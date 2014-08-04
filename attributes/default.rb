@@ -26,3 +26,6 @@ default['global']['prefix'] = '/opt/global'
 
 # updatedb
 default['updatedb']['locate_pkg'] = 'mlocate'
+
+# the_silver_searcher
+default['the_silver_searcher']['build_opt'] = '--prefix=/opt/the_silver_searcher'
