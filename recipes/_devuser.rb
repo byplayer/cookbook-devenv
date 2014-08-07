@@ -104,3 +104,13 @@ group 'sudo' do
   members ['vagrant', node['devenv']['user']['name']]
   action [:create, :manage]
 end
+
+bash 'copy dic' do
+  cwd devenv_user_home
+
+  code <<-EOH
+    mkdir -p ./dic
+    rsync -av --delete /vagrant/dic ./dic
+    chown -R #{node['devenv']['user']['name']}:#{node['devenv']['user']['name']} dic
+  EOH
+end
