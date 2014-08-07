@@ -110,7 +110,7 @@ bash 'copy dic' do
 
   code <<-EOH
     mkdir -p ./dic
-    rsync -av --delete /vagrant/dic ./dic
+    rsync -av --delete /vagrant/dic/ ./dic/
     chown -R #{node['devenv']['user']['name']}:#{node['devenv']['user']['name']} dic
   EOH
 end
