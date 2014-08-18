@@ -1,7 +1,7 @@
 bash 'install_git' do
   cwd '/usr/local/src'
   code <<-EOH
-    if [ -f git-install.sh]; then
+    if [ -f git-install.sh ] ; then
       rm -f git-install.sh
     fi
 
