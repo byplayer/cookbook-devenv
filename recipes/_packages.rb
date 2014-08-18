@@ -14,7 +14,6 @@
    libsqlite3-dev sqlite3
    expect dkms
    eblook lookup-el
-   libgecode-dev
    python-sphinx python-pip
    postgresql postgresql-client libpq-dev
 ).each do |pkg|
