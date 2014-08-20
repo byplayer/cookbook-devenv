@@ -106,6 +106,11 @@ group 'sudo' do
   action [:create, :manage]
 end
 
+group 'vagrant' do
+  members [node['devenv']['user']['name']]
+  action [:create, :manage]
+end
+
 bash 'copy dic' do
   cwd devenv_user_home
 
