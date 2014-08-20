@@ -12,6 +12,10 @@ default['devenv']['.emacs.d']['repo'] = 'https://github.com/byplayer/dot.emacs.d
 default['devenv']['.emacs.d']['ref'] = 'master'
 default['devenv']['.emacs.d']['checkout_branch'] = 'local'
 
+default['devenv']['.git-extensions']['repo'] = 'https://github.com/muratayusuke/git-extensions.git'
+default['devenv']['.git-extensions']['ref'] = 'master'
+default['devenv']['.git-extensions']['checkout_branch'] = 'local'
+
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
