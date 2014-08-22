@@ -13,6 +13,7 @@
    mlocate ssh
    libsqlite3-dev sqlite3
    expect dkms
+   libmcrypt-dev
    eblook lookup-el
    python-sphinx python-pip
    postgresql postgresql-client libpq-dev
