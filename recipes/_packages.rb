@@ -18,6 +18,7 @@
    eblook lookup-el
    python-sphinx python-pip
    postgresql postgresql-client libpq-dev
+   manpages-dev
 ).each do |pkg|
   package pkg do
     action :install
