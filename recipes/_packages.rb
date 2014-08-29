@@ -7,7 +7,8 @@
    wget ncftp ntp
    ibus-mozc mozc-server mozc-utils-gui
    exuberant-ctags
-   emacs24 emacsen-common ibus-el rdtool-elisp emacs-goodies-el
+   emacs24 emacsen-common rdtool-elisp emacs-goodies-el
+   emacs-mozc
    xfonts-shinonome python-xlib
    libterm-readkey-perl
    mlocate ssh
