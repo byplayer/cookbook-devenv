@@ -19,6 +19,9 @@
    python-sphinx python-pip
    postgresql postgresql-client libpq-dev
    manpages-dev
+   iftop bmon iptraf nload nethogs speedometer slurm
+   iptraf tcptrack vnstat  bwm-ng cbm pktstat netdiag
+   ifstat nmon saidar
 ).each do |pkg|
   package pkg do
     action :install
