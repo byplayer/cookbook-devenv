@@ -22,6 +22,7 @@
    iftop bmon iptraf nload nethogs speedometer slurm
    iptraf tcptrack vnstat  bwm-ng cbm pktstat netdiag
    ifstat nmon saidar
+   jq
 ).each do |pkg|
   package pkg do
     action :install
