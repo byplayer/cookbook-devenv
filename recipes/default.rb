@@ -19,6 +19,6 @@ end
   include_recipe cookbook
 end
 
-%w(tmate).each do |recipe|
+%w(devenv::_tmate).each do |recipe|
   include_recipe recipe
 end
