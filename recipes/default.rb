@@ -15,6 +15,10 @@
 end
 
 %w(tmux apt timezone global rvm::user docker updatedb
-   the_silver_searcher nodejs).each do |cookbook|
+   the_silver_searcher nodejs apt-repo).each do |cookbook|
   include_recipe cookbook
+end
+
+%w(tmate).each do |recipe|
+  include_recipe recipe
 end
