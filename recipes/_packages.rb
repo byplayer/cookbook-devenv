@@ -23,6 +23,7 @@
    iptraf tcptrack vnstat  bwm-ng cbm pktstat netdiag
    ifstat nmon saidar
    jq whois
+   nginx
 ).each do |pkg|
   package pkg do
     action :install
