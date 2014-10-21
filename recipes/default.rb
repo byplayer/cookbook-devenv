@@ -10,12 +10,13 @@
 %w(devenv::_locales
    devenv::_git
    devenv::_packages
-   devenv::_devuser).each do |recipe|
+   devenv::_devuser
+   devenv::_mongodb).each do |recipe|
   include_recipe recipe
 end
 
 %w(tmux apt timezone global rvm::user docker updatedb
-   the_silver_searcher nodejs apt-repo).each do |cookbook|
+   the_silver_searcher nodejs apt-repo mongodb).each do |cookbook|
   include_recipe cookbook
 end
 

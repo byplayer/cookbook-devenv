@@ -7,6 +7,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
 %w(tmux apt timezone global rvm docker updatedb
-   the_silver_searcher nodejs apt-repo).each do |cookbook|
+   the_silver_searcher nodejs apt-repo mongodb).each do |cookbook|
   depends cookbook
 end
