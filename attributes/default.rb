@@ -19,6 +19,9 @@ default['devenv']['.git-extensions']['checkout_branch'] = 'local'
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
+default['devenv']['nvm']['repos'] = 'https://github.com/creationix/nvm.git'
+default['devenv']['nvm']['ref'] = 'v0.18.0'
+
 # tmux
 default['tmux']['install_method'] = 'source'
 default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
