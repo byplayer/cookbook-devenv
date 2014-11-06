@@ -24,6 +24,7 @@
    ifstat nmon saidar
    jq whois
    nginx
+   multitail
 ).each do |pkg|
   package pkg do
     action :install
