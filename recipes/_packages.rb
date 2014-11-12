@@ -25,6 +25,7 @@
    jq whois
    nginx
    multitail
+   sam2p
 ).each do |pkg|
   package pkg do
     action :install
