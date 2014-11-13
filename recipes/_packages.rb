@@ -25,7 +25,7 @@
    jq whois
    nginx
    multitail
-   sam2p
+   sam2p tokyotyrant tokyocabinet-bin libtokyotyrant-dev
 ).each do |pkg|
   package pkg do
     action :install
