@@ -21,7 +21,3 @@ end
    the_silver_searcher apt-repo mongodb heroku-toolbelt).each do |cookbook|
   include_recipe cookbook
 end
-
-%w(devenv::_tmate).each do |recipe|
-  include_recipe recipe
-end
