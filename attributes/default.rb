@@ -36,3 +36,6 @@ default['updatedb']['locate_pkg'] = 'mlocate'
 
 # the_silver_searcher
 default['the_silver_searcher']['build_opt'] = '--prefix=/opt/the_silver_searcher'
+
+# p4v
+default['p4v']['version'] = '2014.2.951414'

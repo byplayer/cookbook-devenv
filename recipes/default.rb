@@ -12,7 +12,8 @@
    devenv::_packages
    devenv::_devuser
    devenv::_mongodb
-   devenv::_node).each do |recipe|
+   devenv::_node
+   devenv::_p4v).each do |recipe|
   include_recipe recipe
 end
 
