@@ -41,3 +41,22 @@
 [user]
 	name = <%= @git_user_name %>
 	email = <%= @git_user_email %>
+
+[diff]
+  tool = p4merge
+
+[difftool]
+  prompt = false
+
+[difftool "p4merge"]
+  cmd = p4merge "$LOCAL" "$REMOTE"
+
+[merge]
+    tool = p4merge
+    keepBackup = false
+
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
