@@ -28,7 +28,7 @@ bash 'cleanup .emacs.d elc' do
   user node['devenv']['user']['name']
 
   code <<-EOH
-    find ./.emacs.d -name '*.elc' -exec rm {}\;
+    find ./.emacs.d -name '*.elc' -exec rm {};
   EOH
 end
 
