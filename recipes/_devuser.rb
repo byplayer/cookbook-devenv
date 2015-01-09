@@ -31,7 +31,7 @@ bash 'cleanup .emacs.d elc' do
     find #{devenv_user_home}/.emacs.d -name '*.elc' | xargs rm
   EOH
 
-  only_if "find #{devenv_user_home}/.emacs.d -name '*.elc'"
+  only_if "find #{devenv_user_home}/.emacs.d -name '*.elc' | grep elc"
 end
 
 %w(
