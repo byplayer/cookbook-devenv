@@ -28,8 +28,10 @@ bash 'cleanup .emacs.d elc' do
   user node['devenv']['user']['name']
 
   code <<-EOH
-    find ./.emacs.d -name '*.elc' -exec rm {};
+    find #{devenv_user_home}/.emacs.d -name '*.elc' | xargs rm
   EOH
+
+  not_if "find #{devenv_user_home}/.emacs.d -name '*.elc'"
 end
 
 %w(
