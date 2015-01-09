@@ -22,6 +22,16 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
+# cleanup .emacs.d dir for elc
+bash 'cleanup .emacs.d elc' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+
+  code <<-EOH
+    find ./.emacs.d -name '*.elc' | xargs rm
+  EOH
+end
+
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
