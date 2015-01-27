@@ -24,10 +24,13 @@ set-window-option -g mode-bg white
 set-option -g mouse-select-pane on
 
 # sync clipboard
-# bind-key -temacs-copy M-w run "tmux save-buffer - | xclip -i"
-bind-key -t emacs-copy M-w copy-pipe "xclip -i -selection clipboard"
-bind-key ] run "tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer" 
-bind-key -n C-y run "tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer" 
+# for linux
+if "which xclip" "bind-key -t emacs-copy M-w copy-pipe 'xclip -i -selection clipboard'"
+if "which xclip" "bind-key -n C-y run 'tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer'"
+
+#for mac
+if "which pbcopy" "bind-key -t emacs-copy M-w copy-pipe 'pbcopy'"
+if "which pbpaste" "bind-key -n C-y run 'tmux set-buffer -- \"$(pbpaste)\"; tmux paste-buffer'"
 
 # split
 bind-key h split-window -h
