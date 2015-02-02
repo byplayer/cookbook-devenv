@@ -29,7 +29,7 @@ bash 'cleanup .emacs.d elc' do
 
   code <<-EOH
     find #{devenv_user_home}/.emacs.d -name '*.elc' | xargs rm
-    find #{devenv_user_home}/.emacs.d -type d -empty | grep -v .git | xargs rm -r
+    find #{devenv_user_home}/.emacs.d -type d -empty | grep -v .git | xargs rm -r ; echo rm empty dir in .emacs.d
   EOH
 
   only_if "find #{devenv_user_home}/.emacs.d -name '*.elc' | grep elc"
