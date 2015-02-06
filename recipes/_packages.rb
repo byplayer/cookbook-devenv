@@ -24,8 +24,8 @@
    ifstat nmon saidar
    jq whois
    nginx
-   multitail
    sam2p tokyotyrant tokyocabinet-bin libtokyotyrant-dev
+   postfix
 ).each do |pkg|
   package pkg do
     action :install
