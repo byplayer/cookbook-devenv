@@ -17,7 +17,7 @@
   include_recipe recipe
 end
 
-%w(tmux apt timezone global ruby_rvm::default
+%w(tmux apt timezone global ruby_rvm::rubies
    docker updatedb
    the_silver_searcher apt-repo mongodb heroku-toolbelt).each do |cookbook|
   include_recipe cookbook
