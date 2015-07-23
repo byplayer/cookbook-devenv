@@ -27,6 +27,7 @@
    sam2p tokyotyrant tokyocabinet-bin libtokyotyrant-dev
    postfix
    cmigemo
+   mailutils
 ).each do |pkg|
   package pkg do
     action :install
