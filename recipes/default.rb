@@ -13,12 +13,13 @@
    devenv::_devuser
    devenv::_mongodb
    devenv::_node
-   devenv::_p4v).each do |recipe|
+   devenv::_p4v
+   devenv::_docker).each do |recipe|
   include_recipe recipe
 end
 
 %w(tmux apt timezone global ruby_rvm::default
-   docker updatedb
+   updatedb
    the_silver_searcher apt-repo mongodb heroku-toolbelt).each do |cookbook|
   include_recipe cookbook
 end
