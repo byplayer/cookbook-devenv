@@ -28,7 +28,7 @@
    postfix
    cmigemo
    mailutils
-   curl unzip
+   curl unzip snappy
 ).each do |pkg|
   package pkg do
     action :install
