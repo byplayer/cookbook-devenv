@@ -48,6 +48,17 @@ end
   end
 end
 
+%w(
+  .xsession
+).each do |name|
+  template "#{devenv_user_home}/#{name}" do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode '0755'
+    action :create
+  end
+end
+
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
 %W(
   #{devenv_user_home}/.gconf
