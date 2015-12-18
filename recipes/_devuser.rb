@@ -49,7 +49,7 @@ end
 end
 
 %w(
-  .xsession
+  .xsessionrc
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     owner node['devenv']['user']['name']
