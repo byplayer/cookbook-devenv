@@ -4,6 +4,7 @@
    libevent-dev libncurses5-dev zlib1g-dev libbz2-dev libyaml-dev
    libxml2-dev libxslt1-dev libreadline-dev xclip patch
    libx11-dev
+   libgmp3-dev
    chromium-browser
    wget ncftp ntp
    ibus-mozc mozc-server mozc-utils-gui
