@@ -31,6 +31,7 @@
    cmigemo
    mailutils
    curl unzip libsnappy-dev
+   qt4-qmake libqt4-dev xvfb
 ).each do |pkg|
   package pkg do
     action :install
