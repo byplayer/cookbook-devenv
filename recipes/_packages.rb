@@ -32,6 +32,7 @@
    mailutils
    curl unzip libsnappy-dev
    qt4-qmake libqt4-dev xvfb
+   rlwrap
 ).each do |pkg|
   package pkg do
     action :install
