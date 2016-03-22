@@ -119,7 +119,7 @@ template "#{devenv_user_home}/.ssh/config" do
   source '.ssh/config.erb'
   owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  mode "0666"
+  mode "0600"
   action :create
 end
 
