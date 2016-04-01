@@ -22,19 +22,6 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
-# cleanup .emacs.d dir for elc
-bash 'cleanup .emacs.d elc' do
-  cwd devenv_user_home
-  user node['devenv']['user']['name']
-
-  code <<-EOH
-    find #{devenv_user_home}/.emacs.d -name '*.elc' | xargs rm
-    find #{devenv_user_home}/.emacs.d -type d -empty | grep -v .git | xargs rm -r ; echo rm empty dir in .emacs.d
-  EOH
-
-  only_if "find #{devenv_user_home}/.emacs.d -name '*.elc' | grep elc"
-end
-
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
@@ -151,5 +138,28 @@ bash 'copy dic' do
     mkdir -p ./dic
     rsync -av --delete /vagrant/dic/ ./dic/
     chown -R #{node['devenv']['user']['name']}:#{node['devenv']['user']['name']} dic
+  EOH
+end
+
+# emacs env
+bash 'cleanup .emacs.d elc' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+
+  code <<-EOH
+    find #{devenv_user_home}/.emacs.d -name '*.elc' | xargs rm
+    find #{devenv_user_home}/.emacs.d -type d -empty | grep -v .git | xargs rm -r ; echo rm empty dir in .emacs.d
+  EOH
+
+  only_if "find #{devenv_user_home}/.emacs.d -name '*.elc' | grep elc"
+end
+
+bash 'cask install' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+
+  code <<-EOH
+    curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+    ./.cask/bin/cask upgrade
   EOH
 end
