@@ -157,6 +157,7 @@ end
 bash 'cask install' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  environment "HOME" => devenv_user_home
 
   code <<-EOH
     curl -fsSkL https://raw.github.com/cask/cask/master/go | python
