@@ -19,7 +19,7 @@
   include_recipe recipe
 end
 
-%w(tmux apt timezone global ruby_rvm::default
+%w(tmux apt timezone global
    updatedb
    the_silver_searcher apt-repo mongodb heroku-toolbelt
    setlayout golang).each do |cookbook|
