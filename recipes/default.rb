@@ -10,9 +10,7 @@
 %w(devenv::_locales
    devenv::_git
    devenv::_packages
-   rbenv::default
-   rbenv::ruby_build
-   rbenv-gemset
+   devenv::_rbenv
    devenv::_devuser
    devenv::_mongodb
    devenv::_node

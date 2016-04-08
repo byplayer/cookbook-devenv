@@ -43,3 +43,6 @@ default['p4v']['version'] = '2014.2.951414'
 
 # go
 default['go']['version'] = '1.6'
+
+# rbenv
+default['rbenv']['rubies'] = []
