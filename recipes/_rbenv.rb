@@ -5,5 +5,5 @@
 end
 
 node['rbenv']['rubies'].each do |ver|
-  ruby_version ver
+  rbenv_ruby ver
 end
