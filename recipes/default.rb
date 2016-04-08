@@ -21,6 +21,8 @@ end
 %w(tmux apt timezone global ruby_rvm::default
    updatedb
    the_silver_searcher apt-repo mongodb heroku-toolbelt
-   setlayout golang).each do |cookbook|
+   setlayout golang
+   rbenv::default
+   rbenv::ruby_build).each do |cookbook|
   include_recipe cookbook
 end
