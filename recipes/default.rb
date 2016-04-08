@@ -23,6 +23,7 @@ end
    the_silver_searcher apt-repo mongodb heroku-toolbelt
    setlayout golang
    rbenv::default
-   rbenv::ruby_build).each do |cookbook|
+   rbenv::ruby_build
+   rbenv-gemset).each do |cookbook|
   include_recipe cookbook
 end
