@@ -21,7 +21,7 @@ define :install_rbenv_gemset,
       rbenv gemset create #{params[:ruby_ver]} #{params[:gemset_name]}
       rbenv local #{params[:ruby_ver]}
       rbenv gemset init #{params[:gemset_name]}
-      gem install #{params[:gems].join(' ')}
+      gem install --conservative #{params[:gems].join(' ')}
       rbenv rehash
 
       popd
@@ -50,7 +50,7 @@ define :install_rbenv_gems,
       tmp_dir=`mktemp -d install_rbenv_gems.XXXXXXXXXX`
       pushd $tmp_dir
       rbenv local #{params[:ruby_ver]}
-      gem install #{params[:gems].join(' ')}
+      gem install --conservative #{params[:gems].join(' ')}
       rbenv rehash
 
       popd
