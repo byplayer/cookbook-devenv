@@ -24,6 +24,7 @@ define :install_rbenv_gemset,
       gem install #{params[:gems].join(' ')}
       rbenv rehash
 
+      popd
       rm -r $tmp_dir
     SH
   end
