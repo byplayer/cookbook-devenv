@@ -52,7 +52,7 @@ define :install_rbenv_gems,
       rbenv rehash
 
       popd
-      rm -r $tmp_dir
+      # rm -r $tmp_dir
     SH
   end
 end
