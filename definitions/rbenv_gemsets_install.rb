@@ -45,7 +45,7 @@ define :install_rbenv_gems,
       export PATH=${RBENV_HOME}/bin:${PATH}
       eval "$(rbenv init -)"
 
-      tmp_dir=`mktemp -d rbenv_gemset_tmp.XXXXXXXXXX`
+      tmp_dir=`mktemp -d install_rbenv_gems.XXXXXXXXXX`
       pushd $tmp_dir
       rbenv local #{params[:ruby_ver]}
       gem install #{params[:gems].join(' ')}
