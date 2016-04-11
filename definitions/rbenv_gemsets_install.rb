@@ -11,6 +11,10 @@ define :install_rbenv_gemset,
     user params[:user]
     cwd '/tmp'
     code <<-SH
+      export RBENV_HOME=#{node['rbenv']['root_path']}
+      export PATH=${RBENV_HOME}/bin:${PATH}
+      eval "$(rbenv init -)"
+
       tmp_dir=`mktemp -d rbenv_gemset_tmp.XXXXXXXXXX`
       pushd $tmp_dir
       rbenv gemset create #{params[:ruby_ver]} #{params[:gemset_name]}
