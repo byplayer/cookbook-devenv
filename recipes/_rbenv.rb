@@ -9,6 +9,7 @@ node['rbenv']['rubies'].each do |ver|
 end
 
 def install_rbenv_gemset(ruby_ver, gemset_name, gems)
+  Chef::Log.info("install gem set #{ruby_ver} #{gemset_name} [#{gems.join(',')}]")
   user node['rbenv']['user']
   cwd '/tmp'
   code <<-SH
@@ -18,6 +19,7 @@ def install_rbenv_gemset(ruby_ver, gemset_name, gems)
     rbenv local #{ruby_ver}
     rbenv gemset init #{gemset_name}
     gem install #{gems.join(' ')}
+    rbenv rehash
 
     rm -r $tmp_dir
   SH
