@@ -36,7 +36,7 @@ define :install_rbenv_gems,
   log("install gems #{params[:ruby_ver]} " +
       "[#{params[:gems].join(',')}]")
 
-  bash "install_rbenv_gemset[#{params[:name]}]" do
+  bash "install_rbenv_gems[#{params[:name]}]" do
     user params[:user]
     cwd '/tmp'
     code <<-SH
