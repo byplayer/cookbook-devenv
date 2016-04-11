@@ -8,6 +8,7 @@ define :install_rbenv_gemset,
 
   bash "install_rbenv_gemset[#{params[:name]}]" do
     user params[:user]
+    home "/home/#{params[:user]}"
     cwd '/tmp'
     code <<-SH
       cd /tmp
@@ -38,6 +39,7 @@ define :install_rbenv_gems,
 
   bash "install_rbenv_gems[#{params[:name]}]" do
     user params[:user]
+    home "/home/#{params[:user]}"
     cwd '/tmp'
     code <<-SH
       cd /tmp
@@ -52,7 +54,7 @@ define :install_rbenv_gems,
       rbenv rehash
 
       popd
-      # rm -r $tmp_dir
+      rm -r $tmp_dir
     SH
   end
 end
