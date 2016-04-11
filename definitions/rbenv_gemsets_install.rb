@@ -11,6 +11,7 @@ define :install_rbenv_gemset,
     user params[:user]
     cwd '/tmp'
     code <<-SH
+      cd /tmp
       export RBENV_HOME=#{node['rbenv']['root_path']}
       export PATH=${RBENV_HOME}/bin:${PATH}
       eval "$(rbenv init -)"
