@@ -1,4 +1,3 @@
-
 define :install_rbenv_gemset,
   :user => nil,
   :ruby_ver => nil,
@@ -29,3 +28,32 @@ define :install_rbenv_gemset,
     SH
   end
 end
+
+define :install_rbenv_gems,
+  :user => nil,
+  :ruby_ver => nil,
+  :gems => [] do
+  Chef::Log.info("install gems #{params[:ruby_ver]} " +
+                 "[#{params[:gems].join(',')}]")
+
+  bash "install_rbenv_gemset[#{params[:name]}]" do
+    user params[:user]
+    cwd '/tmp'
+    code <<-SH
+      cd /tmp
+      export RBENV_HOME=#{node['rbenv']['root_path']}
+      export PATH=${RBENV_HOME}/bin:${PATH}
+      eval "$(rbenv init -)"
+
+      tmp_dir=`mktemp -d rbenv_gemset_tmp.XXXXXXXXXX`
+      pushd $tmp_dir
+      rbenv local #{params[:ruby_ver]}
+      gem install #{params[:gems].join(' ')}
+      rbenv rehash
+
+      popd
+      rm -r $tmp_dir
+    SH
+  end
+end
+
