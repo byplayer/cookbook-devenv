@@ -12,8 +12,8 @@ define :install_rbenv_gemset,
     cwd '/tmp'
     code <<-SH
       cd /tmp
-      export RBENV_HOME=#{node['rbenv']['root_path']}
-      export PATH=${RBENV_HOME}/bin:${PATH}
+      export RBENV_ROOT=#{node['rbenv']['root_path']}
+      export PATH=${RBENV_ROOT}/bin:${PATH}
       eval "$(rbenv init -)"
 
       tmp_dir=`mktemp -d rbenv_gemset_tmp.XXXXXXXXXX`
@@ -43,8 +43,8 @@ define :install_rbenv_gems,
     cwd '/tmp'
     code <<-SH
       cd /tmp
-      export RBENV_HOME=#{node['rbenv']['root_path']}
-      export PATH=${RBENV_HOME}/bin:${PATH}
+      export RBENV_ROOT=#{node['rbenv']['root_path']}
+      export PATH=${RBENV_ROOT}/bin:${PATH}
       eval "$(rbenv init -)"
 
       tmp_dir=`mktemp -d install_rbenv_gems.XXXXXXXXXX`
