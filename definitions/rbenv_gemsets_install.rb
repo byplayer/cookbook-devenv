@@ -51,6 +51,8 @@ define :install_rbenv_gems,
       gem install #{params[:gems].join(' ')}
       rbenv rehash
 
+      touch /tmp/hoge
+
       popd
       # rm -r $tmp_dir
     SH
