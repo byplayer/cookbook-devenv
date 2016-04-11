@@ -3,8 +3,8 @@ define :install_rbenv_gemset,
   :ruby_ver => nil,
   :gemset_name => nil,
   :gems => [] do
-  Chef::Log.info("install gem set #{params[:ruby_ver]} " +
-                 "#{params[:gemset_name]} [#{params[:gems].join(',')}]")
+  log("install gem set #{params[:ruby_ver]} " +
+      "#{params[:gemset_name]} [#{params[:gems].join(',')}]")
 
   bash "install_rbenv_gemset[#{params[:name]}]" do
     user params[:user]
@@ -33,8 +33,8 @@ define :install_rbenv_gems,
   :user => nil,
   :ruby_ver => nil,
   :gems => [] do
-  Chef::Log.info("install gems #{params[:ruby_ver]} " +
-                 "[#{params[:gems].join(',')}]")
+  log("install gems #{params[:ruby_ver]} " +
+      "[#{params[:gems].join(',')}]")
 
   bash "install_rbenv_gemset[#{params[:name]}]" do
     user params[:user]
@@ -50,8 +50,6 @@ define :install_rbenv_gems,
       rbenv local #{params[:ruby_ver]}
       gem install #{params[:gems].join(' ')}
       rbenv rehash
-
-      touch /tmp/hoge
 
       popd
       # rm -r $tmp_dir
