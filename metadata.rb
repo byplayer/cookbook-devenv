@@ -8,6 +8,6 @@ version          '0.1.0'
 
 %w(tmux apt timezone global docker updatedb
    the_silver_searcher apt-repo mongodb heroku-toolbelt
-   setlayout golang rbenv).each do |cookbook|
+   setlayout golang rbenv rbenv-gemset).each do |cookbook|
   depends cookbook
 end
