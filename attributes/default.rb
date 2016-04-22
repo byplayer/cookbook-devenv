@@ -51,5 +51,3 @@ default['go']['version'] = '1.6'
 # rbenv
 default['rbenv']['rubies'] = []
 
-# rbenv-gemset
-default['rbenv_gemset']['git_repository'] = 'https://github.com/jf/rbenv-gemset.git'
