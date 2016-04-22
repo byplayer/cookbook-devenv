@@ -158,3 +158,14 @@ bash 'cleanup .emacs.d elc' do
 
   only_if "find #{devenv_user_home}/.emacs.d -name '*.elc' | grep elc"
 end
+
+# ruby tool
+bash 'ruby tool' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+
+  code <<-EOH
+    cd .ruby_tool
+    install.sh
+  EOH
+end
