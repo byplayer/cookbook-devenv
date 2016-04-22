@@ -1,6 +1,6 @@
 %w(aptitude
    gnome-terminal
-   ubuntu-desktop zsh autotools-dev automake libtool
+   lubuntu-desktop zsh autotools-dev automake libtool
    libevent-dev libncurses5-dev zlib1g-dev libbz2-dev libyaml-dev
    libxml2-dev libxslt1-dev libreadline-dev xclip patch
    libx11-dev
