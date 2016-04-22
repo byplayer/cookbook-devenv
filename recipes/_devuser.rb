@@ -166,6 +166,6 @@ bash 'ruby tool' do
 
   code <<-EOH
     cd .ruby_tool
-    install.sh
+    ./install.sh
   EOH
 end
