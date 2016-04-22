@@ -16,6 +16,10 @@ default['devenv']['.git-extensions']['repo'] = 'https://github.com/muratayusuke/
 default['devenv']['.git-extensions']['ref'] = 'master'
 default['devenv']['.git-extensions']['checkout_branch'] = 'local'
 
+default['devenv']['.ruby_tool']['repo'] = 'https://github.com/byplayer/ruby_tool.git'
+default['devenv']['.ruby_tool']['ref'] = 'master'
+default['devenv']['.ruby_tool']['checkout_branch'] = 'local'
+
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
