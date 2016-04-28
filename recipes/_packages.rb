@@ -17,6 +17,7 @@
    libsqlite3-dev sqlite3
    expect dkms
    libmcrypt-dev
+   libffi-dev
    eblook lookup-el
    python-sphinx python-pip
    postgresql postgresql-client libpq-dev
