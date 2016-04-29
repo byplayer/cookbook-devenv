@@ -12,7 +12,6 @@
    devenv::_packages
    devenv::_rbenv
    devenv::_devuser
-   devenv::_mongodb
    devenv::_node
    devenv::_p4v
    devenv::_docker).each do |recipe|
@@ -21,7 +20,7 @@ end
 
 %w(tmux apt timezone global
    updatedb
-   the_silver_searcher apt-repo mongodb heroku-toolbelt
+   the_silver_searcher apt-repo heroku-toolbelt
    setlayout golang).each do |cookbook|
   include_recipe cookbook
 end
