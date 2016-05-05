@@ -30,6 +30,7 @@ default['devenv']['nvm']['ref'] = 'v0.31.0'
 default['tmux']['install_method'] = 'source'
 default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
 default['tmux']['version'] = '2.2'
+-default['tmux']['checksum'] = 'bc28541b64f99929fe8e3ae7a02291263f3c97730781201824c0f05d7c8e19e4'
 
 # global
 default['global']['version'] = '6.3.3'
