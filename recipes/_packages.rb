@@ -34,6 +34,7 @@
    curl unzip libsnappy-dev
    qt4-qmake libqt4-dev xvfb
    rlwrap
+   meld
 ).each do |pkg|
   package pkg do
     action :install

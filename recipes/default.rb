@@ -13,7 +13,6 @@
    devenv::_rbenv
    devenv::_devuser
    devenv::_node
-   devenv::_p4v
    devenv::_docker).each do |recipe|
   include_recipe recipe
 end
