@@ -3,6 +3,7 @@ default['devenv']['user']['name'] = 'devuser'
 default['devenv']['user']['shell'] = '/usr/bin/zsh'
 default['devenv']['user']['password'] = '$1$HhgEQ4ug$CA4/Aqm.LDZuFvtAO4Qu8.' # openssl passwd -1 "devuser"
 default['devenv']['user']['ssh_key_file'] = nil
+default['devenv']['user']['ssh_authorized_keys'] = nil
 
 default['devenv']['.zsh.d']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git'
 default['devenv']['.zsh.d']['ref'] = 'master'
@@ -41,9 +42,6 @@ default['updatedb']['locate_pkg'] = 'mlocate'
 
 # the_silver_searcher
 default['the_silver_searcher']['build_opt'] = '--prefix=/opt/the_silver_searcher'
-
-# p4v
-default['p4v']['version'] = '2014.2.951414'
 
 # go
 default['go']['version'] = '1.6'

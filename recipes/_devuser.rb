@@ -121,6 +121,16 @@ if node['devenv']['user']['ssh_key_file']
   end
 end
 
+if node['devenv']['user']['ssh_authorized_keys']
+  file "#{devenv_user_home}/.ssh/authorized_keys" do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0600"
+    content File.open(node['devenv']['user']['ssh_authorized_keys']) { |f| f.read }
+    action :create
+  end
+end
+
 group 'sudo' do
   members ['vagrant', node['devenv']['user']['name']]
   action [:create, :manage]

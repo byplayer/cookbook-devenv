@@ -43,21 +43,18 @@
 	name = <%= @git_user_name %>
 	email = <%= @git_user_email %>
 
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
+
 [diff]
-  tool = p4merge
+  tool = meld
+  compactionHeuristic = true
 
 [difftool]
   prompt = false
 
-[difftool "p4merge"]
-  cmd = p4merge "$LOCAL" "$REMOTE"
-
 [merge]
-    tool = p4merge
-    keepBackup = false
-
-[mergetool "p4merge"]
-    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-    keepTemporaries = false
-    trustExitCode = false
+    tool = meld
     keepBackup = false
