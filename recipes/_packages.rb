@@ -35,6 +35,7 @@
    qt4-qmake libqt4-dev xvfb
    rlwrap
    meld
+   texi2html texinfo
 ).each do |pkg|
   package pkg do
     action :install
