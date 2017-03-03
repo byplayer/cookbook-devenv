@@ -11,6 +11,7 @@
    exuberant-ctags
    emacs24 emacsen-common rdtool-elisp emacs-goodies-el
    emacs-mozc
+   markdown
    xfonts-shinonome python-xlib
    libterm-readkey-perl
    mlocate ssh
