@@ -11,6 +11,7 @@
    exuberant-ctags
    emacs24 emacsen-common rdtool-elisp emacs-goodies-el
    emacs-mozc
+   markdown
    xfonts-shinonome python-xlib
    libterm-readkey-perl
    mlocate ssh
@@ -38,6 +39,7 @@
    qt4-qmake libqt4-dev xvfb
    rlwrap
    meld
+   texi2html texinfo
 ).each do |pkg|
   package pkg do
     action :install
