@@ -4,7 +4,7 @@ user node['devenv']['user']['name'] do
   shell node['devenv']['user']['shell']
   password node['devenv']['user']['password']
   home devenv_user_home
-  supports manage_home: true
+  manage_home true
 end
 
 ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
