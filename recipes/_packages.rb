@@ -39,6 +39,7 @@
    rlwrap
    meld
    texi2html texinfo
+   lib32z1
 ).each do |pkg|
   package pkg do
     action :install
