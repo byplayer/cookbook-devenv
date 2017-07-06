@@ -23,6 +23,7 @@
    python-sphinx python-pip
    python-virtualenv
    python3-sphinx python3-pip
+   python3-virtualenv
    postgresql postgresql-client libpq-dev
    manpages-dev
    iftop bmon iptraf nload nethogs speedometer slurm
