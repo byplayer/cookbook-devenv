@@ -40,6 +40,7 @@
    rlwrap
    meld
    texi2html texinfo
+   libcupti-dev
 ).each do |pkg|
   package pkg do
     action :install
