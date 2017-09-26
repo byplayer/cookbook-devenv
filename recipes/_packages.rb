@@ -1,6 +1,6 @@
 %w(aptitude
    gnome-terminal
-   lubuntu-desktop zsh autotools-dev automake libtool
+   lubuntu-desktop zsh autotools-dev automake libtool cmake
    libevent-dev libncurses5-dev zlib1g-dev libbz2-dev libyaml-dev
    libxml2-dev libxslt1-dev libreadline-dev xclip patch
    libx11-dev
@@ -40,6 +40,9 @@
    rlwrap
    meld
    texi2html texinfo
+   libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+   qemu-kvm virt-manager libvirt-bin bridge-utils
+
    libcupti-dev
 ).each do |pkg|
   package pkg do

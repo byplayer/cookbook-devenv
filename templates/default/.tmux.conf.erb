@@ -25,7 +25,7 @@ set-option -g mouse on
 
 # sync clipboard
 # for linux
-if "which xclip" "bind-key -t emacs-copy M-w copy-pipe 'xclip -i -selection clipboard'"
+if "which xclip" "bind-key -T copy-mode M-w send -X copy-pipe-and-cancel 'xclip -i -selection clipboard'"
 if "which xclip" "bind-key -n C-y run 'tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer'"
 
 #for mac

@@ -8,6 +8,7 @@
 #
 
 %w(devenv::_locales
+   devenv::_timezone
    devenv::_git
    devenv::_packages
    devenv::_rbenv
@@ -17,7 +18,7 @@
   include_recipe recipe
 end
 
-%w(tmux apt timezone global
+%w(tmux apt global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
    setlayout golang).each do |cookbook|
