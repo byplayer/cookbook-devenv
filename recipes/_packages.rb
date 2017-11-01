@@ -31,7 +31,7 @@
    ifstat nmon saidar
    jq whois
    nginx
-   sam2p tokyotyrant tokyocabinet-bin libtokyotyrant-dev
+   tokyotyrant tokyocabinet-bin libtokyotyrant-dev
    postfix
    cmigemo
    mailutils
