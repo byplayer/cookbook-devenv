@@ -48,11 +48,6 @@ end
 
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
 %W(
-  #{devenv_user_home}/.gconf
-  #{devenv_user_home}/.gconf/apps
-  #{devenv_user_home}/.gconf/apps/gnome-terminal
-  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles
-  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
 ).each do |dir_name|
@@ -63,28 +58,6 @@ end
     recursive true
     action :create
   end
-end
-
-%W(
-  #{devenv_user_home}/.gconf/apps
-  #{devenv_user_home}/.gconf/apps/gnome-terminal
-  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles
-  #{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default
-).each do |dir|
-  file File.join(dir, '%gconf.xml') do
-    owner node['devenv']['user']['name']
-    group node['devenv']['user']['name']
-    mode "0600"
-    action :touch
-  end
-end
-
-template "#{devenv_user_home}/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml" do
-  source '.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb'
-  owner node['devenv']['user']['name']
-  group node['devenv']['user']['name']
-  mode "0600"
-  action :create
 end
 
 template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
