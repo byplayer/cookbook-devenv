@@ -7,14 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w(devenv::_locales
+%w[devenv::_nsswitch
+   devenv::_locales
    devenv::_timezone
    devenv::_git
    devenv::_packages
    devenv::_rbenv
    devenv::_devuser
    devenv::_node
-   devenv::_docker).each do |recipe|
+   devenv::_docker].each do |recipe|
   include_recipe recipe
 end
 
