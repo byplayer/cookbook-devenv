@@ -25,6 +25,7 @@ end
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
+  .xscreensaver
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     owner node['devenv']['user']['name']
