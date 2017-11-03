@@ -41,7 +41,7 @@ bash 'load dconfig' do
   user node['devenv']['user']['name']
 
   code <<-EOH
-    dconf load / < ~/.dconf.conf
+    dconf load / < .dconf.conf
   EOH
 end
 
