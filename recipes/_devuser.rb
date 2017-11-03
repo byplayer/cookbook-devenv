@@ -42,7 +42,7 @@ bash 'load dconfig' do
   environment ({ 'HOME' => devenv_user_home })
 
   code <<-EOH
-    dconf load / < ~/.dconf.conf
+    DISPLAY=:0 dconf load / < ~/.dconf.conf
   EOH
 end
 
