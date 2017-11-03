@@ -39,9 +39,10 @@ end
 bash 'load dconfig' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
 
   code <<-EOH
-    dconf load / < .dconf.conf
+    dconf load / < ~/.dconf.conf
   EOH
 end
 
