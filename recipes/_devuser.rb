@@ -25,7 +25,7 @@ end
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
-  .xscreensaver
+  .xscreensaver .xinputrc .dconf.conf
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     owner node['devenv']['user']['name']
@@ -34,6 +34,15 @@ end
               git_user_email: node['devenv']['git']['user_email']
     action :create
   end
+end
+
+bash 'load dconfig' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+
+  code <<-EOH
+    dconf load / < ~/.dconf.conf
+  EOH
 end
 
 %w(
