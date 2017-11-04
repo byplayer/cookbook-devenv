@@ -36,15 +36,16 @@ end
   end
 end
 
-bash 'load dconfig' do
-  cwd devenv_user_home
-  user node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+# it doesn't work
+# bash 'load dconfig' do
+#   cwd devenv_user_home
+#   user node['devenv']['user']['name']
+#   environment ({ 'HOME' => devenv_user_home })
 
-  code <<-EOH
-    DISPLAY=:0 dconf load / < ~/.dconf.conf
-  EOH
-end
+#   code <<-EOH
+#     DISPLAY=:0 dconf load / < ~/.dconf.conf
+#   EOH
+# end
 
 %w(
   .xsessionrc
