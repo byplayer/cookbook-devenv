@@ -27,7 +27,6 @@ end
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lubuntu-rc.xml
-  .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
@@ -65,7 +64,6 @@ end
 %W(
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
-  #{devenv_user_home}/.config/xfce4/xfconf/xfce-perchannel-xml
 ).each do |dir_name|
   directory dir_name do
     owner node['devenv']['user']['name']

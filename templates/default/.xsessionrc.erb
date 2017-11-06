@@ -4,3 +4,23 @@ if [ -f $HOME/.dconf.conf ]; then
   dconf load / < ~/.dconf.conf
   mv $HOME/.dconf.conf $HOME/.dconf.conf.bk
 fi
+
+function set_param() {
+    CANNEL=$1
+    KEY=$2
+    VAL=$3
+    TYPE=$4
+
+    xfconf-query -c $CANNEL -p $KEY > /dev/null 2>/dev/null
+    RES=$?
+
+    if [ "$RES" -eq "0" ]; then
+        xfconf-query -c $CANNEL -p $KEY -s $VAL
+    else
+        xfconf-query -c $CANNEL -p $KEY -n -t $TYPE -s $VAL
+    fi
+}
+
+set_param xfce4-power-manager /xfce4-power-manager/dpms-enabled false bool
+set_param xfce4-power-manager /xfce4-power-manager/blank-on-ac 0 int
+set_param xfce4-power-manager /xfce4-power-manager/blank-on-battery 0 int
