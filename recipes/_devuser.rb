@@ -26,8 +26,11 @@ end
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
+  .config/openbox/lubuntu-rc.xml
+  .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
+    source "#{name}.erb"
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
     variables git_user_name: node['devenv']['git']['user_name'],
@@ -62,6 +65,7 @@ end
 %W(
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
+  #{devenv_user_home}/.config/xfce4/xfconf/xfce-perchannel-xml
 ).each do |dir_name|
   directory dir_name do
     owner node['devenv']['user']['name']
@@ -70,14 +74,6 @@ end
     recursive true
     action :create
   end
-end
-
-template "#{devenv_user_home}/.config/openbox/lubuntu-rc.xml" do
-  source '.config/openbox/lubuntu-rc.xml.erb'
-  owner node['devenv']['user']['name']
-  group node['devenv']['user']['name']
-  mode "0600"
-  action :create
 end
 
 directory "#{devenv_user_home}/.ssh" do
