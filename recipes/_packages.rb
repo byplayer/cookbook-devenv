@@ -19,7 +19,7 @@
    expect dkms
    libmcrypt-dev
    libffi-dev
-   libcurl4-dev
+   libcurl4-gnutls-dev
    eblook lookup-el
    python-sphinx python-pip
    python-virtualenv
