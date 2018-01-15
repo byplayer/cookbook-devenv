@@ -6,7 +6,7 @@
    libx11-dev
    libgmp3-dev
    chromium-browser
-   wget ncftp ntp
+   wget ncftp ntp nmap
    ibus-mozc mozc-server mozc-utils-gui
    exuberant-ctags
    emacs24 emacsen-common rdtool-elisp emacs-goodies-el
@@ -19,7 +19,7 @@
    expect dkms
    libmcrypt-dev
    libffi-dev
-   libcurl-dev
+   libcurl4-dev
    eblook lookup-el
    python-sphinx python-pip
    python-virtualenv
