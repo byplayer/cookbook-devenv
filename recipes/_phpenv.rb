@@ -1,7 +1,12 @@
-%w(phpenv::default).each do |recipe|
+# create symlink for php build
+link '/usr/include/curl' do
+  to '/usr/include/x86_64-linux-gnu/curl'
+end
+
+%w[phpenv::default].each do |recipe|
   include_recipe recipe
 end
 
-node['phpenv']['phps'].each do |ver, _args|
+node['phpenv']['phps'].each_key do |ver|
   phpenv_build ver
 end
