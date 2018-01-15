@@ -1,4 +1,4 @@
-%w(aptitude
+%w[aptitude
    gnome-terminal
    lubuntu-desktop zsh autotools-dev automake libtool cmake
    libevent-dev libncurses5-dev zlib1g-dev libbz2-dev libyaml-dev
@@ -19,6 +19,7 @@
    expect dkms
    libmcrypt-dev
    libffi-dev
+   libcurl-dev
    eblook lookup-el
    python-sphinx python-pip
    python-virtualenv
@@ -27,7 +28,7 @@
    postgresql postgresql-client libpq-dev
    manpages-dev
    iftop bmon iptraf nload nethogs speedometer slurm
-   iptraf tcptrack vnstat  bwm-ng cbm pktstat netdiag
+   iptraf tcptrack vnstat bwm-ng cbm pktstat netdiag
    ifstat nmon saidar
    jq whois
    nginx
@@ -42,8 +43,7 @@
    texi2html texinfo
    libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
    qemu-kvm virt-manager libvirt-bin bridge-utils
-   libgdbm-dev libgroonga-dev
-).each do |pkg|
+   libgdbm-dev libgroonga-dev].each do |pkg|
   package pkg do
     action :install
   end
