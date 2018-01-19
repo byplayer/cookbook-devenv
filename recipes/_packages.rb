@@ -43,8 +43,7 @@
    texi2html texinfo
    libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
    qemu-kvm virt-manager libvirt-bin bridge-utils
-   libgdbm-dev libgroonga-dev
-   docker.io docker-compose].each do |pkg|
+   libgdbm-dev libgroonga-dev].each do |pkg|
   package pkg do
     action :install
   end
