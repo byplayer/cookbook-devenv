@@ -46,3 +46,6 @@ default['go']['version'] = '1.6'
 # rbenv
 default['rbenv']['rubies'] = []
 
+# docker-compose
+default['docker_compose']['release'] = '1.18.0'
+
