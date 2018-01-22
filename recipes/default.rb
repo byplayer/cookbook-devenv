@@ -23,6 +23,6 @@ end
 %w(tmux apt global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout golang trash-cli).each do |cookbook|
+   setlayout golang trash-cli chefdk).each do |cookbook|
   include_recipe cookbook
 end
