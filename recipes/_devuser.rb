@@ -110,6 +110,25 @@ if node['devenv']['user']['ssh_authorized_keys']
   end
 end
 
+if ['devenv']['user']['knife_config']
+  file "#{devenv_user_home}/.chef/knife.rb" do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    content File.open(node['devenv']['user']['knife_config']) { |f| f.read }
+    action :create
+  end
+end
+
+if node['devenv']['user']['knife_key']
+  file "#{devenv_user_home}/.chef/knife.pem" do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0600"
+    content File.open(node['devenv']['user']['knife_key']) { |f| f.read }
+    action :create
+  end
+end
+
 group 'sudo' do
   members ['vagrant', node['devenv']['user']['name']]
   action [:create, :manage]
