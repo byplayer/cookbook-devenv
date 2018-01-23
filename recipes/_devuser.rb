@@ -110,7 +110,7 @@ if node['devenv']['user']['ssh_authorized_keys']
   end
 end
 
-if ['devenv']['user']['knife_config']
+if node['devenv']['user']['knife_config']
   file "#{devenv_user_home}/.chef/knife.rb" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
