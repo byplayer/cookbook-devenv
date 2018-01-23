@@ -110,6 +110,13 @@ if node['devenv']['user']['ssh_authorized_keys']
   end
 end
 
+directory "#{devenv_user_home}/.chef" do
+  owner node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  mode "0755"
+  action :create
+end
+
 if node['devenv']['user']['knife_config']
   file "#{devenv_user_home}/.chef/knife.rb" do
     owner node['devenv']['user']['name']
