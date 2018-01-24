@@ -148,7 +148,7 @@ end
 
 group 'docker' do
   members [node['devenv']['user']['name']]
-  action [:create, :manage]
+  action [:create]
 end
 
 bash 'copy dic' do

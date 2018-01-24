@@ -13,16 +13,16 @@
    devenv::_git
    devenv::_packages
    devenv::_rbenv
+   devenv::_docker
    devenv::_devuser
    devenv::_node
-   devenv::_docker
    devenv::_phpenv].each do |recipe|
   include_recipe recipe
 end
 
-%w(tmux apt global
+%w[tmux apt global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout golang trash-cli).each do |cookbook|
+   setlayout golang trash-cli].each do |cookbook|
   include_recipe cookbook
 end
