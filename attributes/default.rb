@@ -52,3 +52,7 @@ default['docker_compose']['release'] = '1.18.0'
 # knife config
 default['devenv']['user']['knife_config'] = nil
 default['devenv']['user']['knife_key'] = nil
+
+# phpenv
+default['phpenv']['git_force_update'] = true
+default['phpenv']['php-build']['git_force_update'] = true
