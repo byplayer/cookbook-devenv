@@ -22,6 +22,20 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
+# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
+%W(
+  #{devenv_user_home}/.config
+  #{devenv_user_home}/.config/openbox
+).each do |dir_name|
+  directory dir_name do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0700"
+    recursive true
+    action :create
+  end
+end
+
 %w(
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
@@ -56,20 +70,6 @@ end
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
     mode '0755'
-    action :create
-  end
-end
-
-# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-%W(
-  #{devenv_user_home}/.config
-  #{devenv_user_home}/.config/openbox
-).each do |dir_name|
-  directory dir_name do
-    owner node['devenv']['user']['name']
-    group node['devenv']['user']['name']
-    mode "0700"
-    recursive true
     action :create
   end
 end
