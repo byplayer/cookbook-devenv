@@ -39,7 +39,6 @@
    curl unzip libsnappy-dev
    qt4-qmake libqt4-dev xvfb
    rlwrap
-   meld
    texi2html texinfo
    libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
    qemu-kvm virt-manager libvirt-bin bridge-utils

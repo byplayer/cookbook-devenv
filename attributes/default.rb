@@ -40,6 +40,9 @@ default['global']['prefix'] = '/opt/global'
 # updatedb
 default['updatedb']['locate_pkg'] = 'mlocate'
 
+# p4v
+default['p4v']['version'] = '2017.3.1601999'
+
 # go
 default['go']['version'] = '1.9.4'
 

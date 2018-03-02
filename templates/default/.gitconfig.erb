@@ -49,12 +49,21 @@
   diff = diff-highlight | less
 
 [diff]
-  tool = meld
+  tool = p4merge
   compactionHeuristic = true
 
 [difftool]
   prompt = false
 
+[difftool "p4merge"]
+  cmd = p4merge "$LOCAL" "$REMOTE"
+
 [merge]
-    tool = meld
+    tool = p4merge
+    keepBackup = false
+
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
     keepBackup = false

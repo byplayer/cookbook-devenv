@@ -16,7 +16,8 @@
    devenv::_docker
    devenv::_devuser
    devenv::_node
-   devenv::_phpenv].each do |recipe|
+   devenv::_phpenv
+   devenv::_p4v].each do |recipe|
   include_recipe recipe
 end
 
