@@ -190,6 +190,7 @@ end
 bash 'install salias' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  environment HOME: devenv_user_home
 
   code <<-EOH
     export GOPATH=$HOME/.go
