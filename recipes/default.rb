@@ -7,7 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w[devenv::_nsswitch
+%w[
+   golang
+   devenv::_nsswitch
    devenv::_locales
    devenv::_timezone
    devenv::_git
@@ -24,6 +26,6 @@ end
 %w[tmux apt global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout golang trash-cli].each do |cookbook|
+   setlayout trash-cli].each do |cookbook|
   include_recipe cookbook
 end
