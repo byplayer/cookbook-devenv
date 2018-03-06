@@ -41,7 +41,6 @@ end
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lubuntu-rc.xml
-  salias.toml
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
@@ -183,20 +182,5 @@ bash 'ruby tool' do
   code <<-EOH
     cd .ruby_tool
     ./install.sh
-  EOH
-end
-
-# salias
-bash 'install salias' do
-  cwd devenv_user_home
-  user node['devenv']['user']['name']
-  environment HOME: devenv_user_home
-
-  code <<-EOH
-    export GOPATH=$HOME/.go
-    export GOBIN=$GOPATH/bin
-    export PATH=$PATH:/usr/local/go/bin:$GOBIN
-
-    go get github.com/lycoris0731/salias
   EOH
 end
