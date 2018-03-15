@@ -40,7 +40,7 @@ end
   .dir_colors .globalrc .ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
-  .config/openbox/lubuntu-rc.xml
+  .config/openbox/lubuntu-rc.xml .xkbmaprc.tpl
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
