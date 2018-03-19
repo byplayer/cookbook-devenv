@@ -9,7 +9,7 @@
 
 %w[
    golang
-   devenv::_nsswitch
+   devenv::_network
    devenv::_locales
    devenv::_timezone
    devenv::_git
