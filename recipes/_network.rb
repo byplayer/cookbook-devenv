@@ -8,3 +8,7 @@ template "/etc/systemd/resolved.conf" do
   action :create
 end
 
+template "/etc/ntp.conf" do
+  source 'etc/ntp.conf.erb'
+  action :create
+end
