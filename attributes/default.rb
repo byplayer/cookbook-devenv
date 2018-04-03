@@ -44,7 +44,7 @@ default['updatedb']['locate_pkg'] = 'mlocate'
 default['p4v']['version'] = '2017.3.1601999'
 
 # go
-default['go']['version'] = '1.9.4'
+default['go']['version'] = '1.10.1'
 
 # rbenv
 default['rbenv']['rubies'] = []
