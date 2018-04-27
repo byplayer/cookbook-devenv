@@ -59,3 +59,32 @@ default['devenv']['user']['knife_key'] = nil
 # phpenv
 default['phpenv']['git_force_update'] = true
 default['phpenv']['php-build']['git_force_update'] = true
+
+default['phpenv']['packages'] = %w(
+  re2c
+  libsqlite0-dev
+  libxml2-dev
+  libpcre3-dev
+  libbz2-dev
+  libcurl4-openssl-dev
+  libdb-dev
+  libjpeg-dev
+  libpng12-dev
+  libxpm-dev
+  libfreetype6-dev
+  libmysqlclient-dev
+  postgresql-server-dev-all
+  libt1-dev
+  libgmp-dev
+  libsasl2-dev
+  libmhash-dev
+  unixodbc-dev
+  freetds-dev
+  libpspell-dev
+  libsnmp-dev
+  libtidy-dev
+  libxslt1-dev
+  libmcrypt-dev
+  libssl-dev
+  libreadline-dev
+)
