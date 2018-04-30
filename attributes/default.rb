@@ -73,7 +73,6 @@ default['phpenv']['packages'] = %w(
   libfreetype6-dev
   libmysqlclient-dev
   postgresql-server-dev-all
-  libt1-dev
   libgmp-dev
   libsasl2-dev
   libmhash-dev
