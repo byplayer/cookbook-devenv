@@ -21,6 +21,7 @@
    libmcrypt-dev
    libffi-dev
    libcurl4-gnutls-dev
+   libid3-dev
    eblook lookup-el
    python-sphinx python-pip
    python-virtualenv
