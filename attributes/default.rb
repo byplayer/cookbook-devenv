@@ -41,7 +41,7 @@ default['global']['prefix'] = '/opt/global'
 default['updatedb']['locate_pkg'] = 'mlocate'
 
 # go
-default['go']['version'] = '1.10.1'
+default['go']['version'] = '1.10.3'
 
 # rbenv
 default['rbenv']['rubies'] = []
