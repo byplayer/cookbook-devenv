@@ -14,8 +14,6 @@ PATH=$PATH:/bin:/sbin:/usr/sbin
 
 . /lib/lsb/init-functions
 
-test -d /usr/share/doc/virtualbox-guest-utils -a -x /usr/sbin/VBoxService || exit 0
-
 in_virtual_machine()
 {
 	if [ -z "$(lspci -d 80ee:beef)" ]; then
