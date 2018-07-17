@@ -34,7 +34,7 @@ default['tmux']['version'] = '2.6'
 default['tmux']['checksum'] = 'b17cd170a94d7b58c0698752e1f4f263ab6dc47425230df7e53a6435cc7cd7e8'
 
 # global
-default['global']['version'] = '6.3.3'
+default['global']['version'] = '6.6.2'
 default['global']['prefix'] = '/opt/global'
 
 # updatedb
