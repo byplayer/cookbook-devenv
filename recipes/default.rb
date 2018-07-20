@@ -9,6 +9,7 @@
 
 %w[
    golang
+   golang::packages
    devenv::_network
    devenv::_locales
    devenv::_timezone

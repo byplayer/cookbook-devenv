@@ -121,7 +121,7 @@
        use obconf if you want to change these without having to log out
        and back in -->
     <number>4</number>
-    <firstdesk>1</firstdesk>
+    <firstdesk>3</firstdesk>
     <names>
       <name>desk 1</name>
       <name>desk 2</name>
@@ -921,5 +921,15 @@
       <maximized>true</maximized>
     </application>
     -->
+  <!-- my xterm with screen in it must always be on desktop 2,
+       maximized and below everything else -->
+    <application class="Gnome-terminal">
+      <desktop>3</desktop>
+      <maximized>yes</maximized>
+    </application>
+    <application class="Emacs">
+      <desktop>1</desktop>
+      <maximized>yes</maximized>
+    </application>
   </applications>
 </openbox_config>
