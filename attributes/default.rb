@@ -25,7 +25,7 @@ default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
 default['devenv']['nvm']['repos'] = 'https://github.com/creationix/nvm.git'
-default['devenv']['nvm']['ref'] = 'v0.31.0'
+default['devenv']['nvm']['ref'] = 'v0.33.11'
 
 # tmux
 default['tmux']['install_method'] = 'source'
