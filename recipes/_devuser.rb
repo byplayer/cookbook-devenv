@@ -184,3 +184,11 @@ bash 'ruby tool' do
     ./install.sh
   EOH
 end
+
+# use euc-jp, sjis in meld
+bash 'add meld encoding' do
+  user node['devenv']['user']['name']
+  code <<-EOH
+    gsettings set org.gnome.meld detect-encodings "['utf8', 'euc-jp', 'shift_jis']"
+  EOH
+end
