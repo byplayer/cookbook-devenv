@@ -23,7 +23,7 @@ if node['devenv']['nvm']['node']
       code <<-EOH
         source $HOME/.nvm/nvm.sh
 
-        nvm versions | grep #{version} > /dev/null 2>&1
+        nvm ls | grep #{version} > /dev/null 2>&1
         if [ $result -eq 0 ]; then
           exit 0
         fi
