@@ -29,7 +29,7 @@ if node['devenv']['nvm']['node']
           exit 0
         fi
 
-        nvm install ${version}
+        nvm install #{version}
       EOH
     end
   end
