@@ -24,6 +24,7 @@ if node['devenv']['nvm']['node']
         source $HOME/.nvm/nvm.sh
 
         nvm ls | grep #{version} > /dev/null 2>&1
+        result=$?
         if [ $result -eq 0 ]; then
           exit 0
         fi
