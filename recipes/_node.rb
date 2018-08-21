@@ -13,3 +13,23 @@ git "#{devenv_user_home}/.nvm" do
   enable_submodules true
   action :sync
 end
+
+if node['devenv']['nvm']['node']
+  node['devenv']['nvm']['node'].each do |version, _opt|
+    bash 'cleanup .emacs.d elc' do
+      cwd devenv_user_home
+      user node['devenv']['user']['name']
+      environment ({ 'HOME' => devenv_user_home })
+      code <<-EOH
+        source $HOME/.nvm/nvm.sh
+
+        nvm versions | grep #{version} > /dev/null 2>&1
+        if [ $result -eq 0 ]; then
+          exit 0
+        fi
+
+        nvm install ${version}
+      EOH
+    end
+  end
+end
