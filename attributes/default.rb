@@ -83,13 +83,3 @@ default['phpenv']['packages'] = %w(
   libssl-dev
   libreadline-dev
 )
-
-# for conda
-default['install']['dir'] = '/opt'
-default['install']['user'] = 'root'
-default['conda']['dir'] = '/opt/anaconda'
-default['conda']['home'] = "#{node['conda']['dir']}/anaconda-#{node['conda']['python']}-#{node['conda']['version']}"
-default['conda']['base_dir'] = "#{node['conda']['dir']}/anaconda"
-default['conda']['user'] = 'anaconda'
-default['conda']['group'] = 'anaconda'
-default['conda']['default_libs'] = []

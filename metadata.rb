@@ -8,6 +8,6 @@ version          '0.1.0'
 
 %w(tmux apt global docker docker_compose docker-machine updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout golang rbenv trash-cli phpenv conda).each do |cookbook|
+   setlayout golang rbenv trash-cli phpenv).each do |cookbook|
   depends cookbook
 end
