@@ -85,8 +85,9 @@ default['phpenv']['packages'] = %w(
 )
 
 # for conda
-default['install']['dir'] = '/opt/anaconda'
+default['install']['dir'] = '/opt'
 default['install']['user'] = 'root'
+default['conda']['dir'] = '/opt/anaconda'
 default['conda']['user'] = 'anaconda'
 default['conda']['group'] = 'anaconda'
 default['conda']['default_libs'] = []
