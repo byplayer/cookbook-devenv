@@ -83,3 +83,10 @@ default['phpenv']['packages'] = %w(
   libssl-dev
   libreadline-dev
 )
+
+# for conda
+default['install']['dir'] = '/opt/anaconda'
+default['install']['user'] = 'root'
+default['conda']['user'] = 'anaconda'
+default['conda']['group'] = 'anaconda'
+default['conda']['default_libs'] = []
