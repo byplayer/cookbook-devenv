@@ -18,10 +18,12 @@
    mlocate ssh
    libsqlite3-dev sqlite3
    expect dkms
+   libgif-dev
    libmcrypt-dev
    libffi-dev
    libcurl4-gnutls-dev
    libgtk-3-dev
+   libtiff-dev
    libwebkit2gtk-4.0-dev
    libid3-dev
    eblook lookup-el
