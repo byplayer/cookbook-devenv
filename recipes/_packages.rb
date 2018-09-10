@@ -22,7 +22,7 @@
    libffi-dev
    libcurl4-gnutls-dev
    libgtk-3-dev
-   libwebkitgtk-3.0-dev
+   libwebkit2gtk-4.0-dev
    libid3-dev
    eblook lookup-el
    python-sphinx python-pip
