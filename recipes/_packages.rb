@@ -22,6 +22,7 @@
    libmcrypt-dev
    libffi-dev
    libcurl4-gnutls-dev
+   libgnutls28-dev
    libgtk-3-dev
    libtiff-dev
    libwebkit2gtk-4.0-dev
