@@ -24,11 +24,7 @@
 # You can specify target with GTAGSLABEL environment variable.
 #
 default:\
-	:tc=native:tc=exuberant-ctags:tc=htags:
-native:\
-	:tc=gtags:tc=htags:
-user:\
-	:tc=user-custom:tc=htags:
+	:tc=exuberant-ctags:tc=htags:
 ctags:\
 	:tc=exuberant-ctags:tc=htags:
 #---------------------------------------------------------------------
@@ -38,20 +34,8 @@ ctags:\
 common:\
 	:skip=HTML/,HTML.pub/,tags,TAGS,ID,y.tab.c,y.tab.h,cscope.out,cscope.po.out,cscope.in.out,SCCS/,RCS/,CVS/,CVSROOT/,{arch}/,autom4te.cache/,.svn/,.git/,checkout/,undohist/,semanticdb/:
 #
-# Built-in parsers.
-#
-gtags:\
-	:tc=common:\
-	:tc=builtin-parser:
-builtin-parser:\
-	:langmap=c\:.c.h,yacc\:.y,asm\:.s.S,java\:.java,cpp\:.c++.cc.hh.cpp.cxx.hxx.hpp.C.H,php\:.php.php3.phtml.inc:
-#
 # skeleton for user's custom parser.
 #
-user-custom|User custom plugin parser:\
-	:tc=common:\
-	:langmap=c\:.c.h:\
-	:gtags_parser=c\:/opt/global/lib/gtags/user-custom.la:
 #
 # Plug-in parser to use Exuberant Ctags.
 #
@@ -97,6 +81,7 @@ exuberant-ctags|plugin-example|setting to use Exuberant Ctags plug-in parser:\
 	:langmap=Vim\:.vim:\
 	:langmap=YACC\:.y:\
 	:langmap=Go\:.go:\
+	:langmap=Kotlin\:.kt:\
 	:gtags_parser=Asm\:/opt/global/lib/gtags/exuberant-ctags.la:\
 	:gtags_parser=Asp\:/opt/global/lib/gtags/exuberant-ctags.la:\
 	:gtags_parser=Awk\:/opt/global/lib/gtags/exuberant-ctags.la:\
@@ -136,7 +121,9 @@ exuberant-ctags|plugin-example|setting to use Exuberant Ctags plug-in parser:\
 	:gtags_parser=VHDL\:/opt/global/lib/gtags/exuberant-ctags.la:\
 	:gtags_parser=Vim\:/opt/global/lib/gtags/exuberant-ctags.la:\
 	:gtags_parser=YACC\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Go\:/opt/global/lib/gtags/exuberant-ctags.la:
+	:gtags_parser=Go\:/opt/global/lib/gtags/exuberant-ctags.la:\
+	:gtags_parser=Kotlin\:/opt/global/lib/gtags/exuberant-ctags.la:
+
 #---------------------------------------------------------------------
 # Configuration for htags(1)
 # Let's paint hypertext with your favorite colors!
