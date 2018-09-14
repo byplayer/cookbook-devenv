@@ -18,15 +18,18 @@
    mlocate ssh
    libsqlite3-dev sqlite3
    expect dkms
+   libgif-dev
    libmcrypt-dev
    libffi-dev
    libcurl4-gnutls-dev
+   libgnutls28-dev
+   libgtk-3-dev
+   libtiff-dev
+   libwebkit2gtk-4.0-dev
    libid3-dev
    eblook lookup-el
    python-sphinx python-pip
-   python-virtualenv
    python3-sphinx python3-pip
-   python3-virtualenv
    postgresql postgresql-client libpq-dev
    manpages-dev
    iftop bmon iptraf nload nethogs speedometer slurm

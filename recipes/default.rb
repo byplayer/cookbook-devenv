@@ -20,7 +20,8 @@
    devenv::_devuser
    devenv::_node
    devenv::_phpenv
-   devenv::_vbox-guest-utils].each do |recipe|
+   devenv::_vbox-guest-utils
+   devenv::_python].each do |recipe|
   include_recipe recipe
 end
 
