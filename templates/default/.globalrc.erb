@@ -24,9 +24,9 @@
 # You can specify target with GTAGSLABEL environment variable.
 #
 default:\
-	:tc=exuberant-ctags:tc=htags:
+	:tc=universal-ctags:tc=htags:
 ctags:\
-	:tc=exuberant-ctags:tc=htags:
+	:tc=universal-ctags:tc=htags:
 #---------------------------------------------------------------------
 # Configuration for gtags(1)
 # See gtags(1).
@@ -39,7 +39,7 @@ common:\
 #
 # Plug-in parser to use Exuberant Ctags.
 #
-exuberant-ctags|plugin-example|setting to use Exuberant Ctags plug-in parser:\
+universal-ctags|for universal-ctags|setting to use universal ctags plug-in parser:\
 	:tc=common:\
 	:langmap=Asm\:.asm.ASM.s.S:\
 	:langmap=Asp\:.asp.asa:\
@@ -82,47 +82,47 @@ exuberant-ctags|plugin-example|setting to use Exuberant Ctags plug-in parser:\
 	:langmap=YACC\:.y:\
 	:langmap=Go\:.go:\
 	:langmap=Kotlin\:.kt:\
-	:gtags_parser=Asm\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Asp\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Awk\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Basic\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=BETA\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=C\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=C++\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=C#\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Cobol\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=DosBatch\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Eiffel\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Erlang\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Flex\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Fortran\:/opt/global/lib/gtags/exuberant-ctags.la:\
-# 	:gtags_parser=HTML\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Java\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=JavaScript\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Lisp\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Lua\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=MatLab\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=OCaml\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Pascal\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Perl\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=PHP\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Python\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=REXX\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Ruby\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Scheme\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Sh\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=SLang\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=SML\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=SQL\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Tcl\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Tex\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Vera\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Verilog\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=VHDL\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Vim\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=YACC\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Go\:/opt/global/lib/gtags/exuberant-ctags.la:\
-	:gtags_parser=Kotlin\:/opt/global/lib/gtags/exuberant-ctags.la:
+	:gtags_parser=Asm\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Asp\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Awk\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Basic\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=BETA\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=C\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=C++\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=C#\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Cobol\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=DosBatch\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Eiffel\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Erlang\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Flex\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Fortran\:/opt/global/lib/gtags/universal-ctags.la:\
+# 	:gtags_parser=HTML\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Java\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=JavaScript\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Lisp\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Lua\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=MatLab\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=OCaml\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Pascal\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Perl\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=PHP\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Python\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=REXX\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Ruby\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Scheme\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Sh\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=SLang\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=SML\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=SQL\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Tcl\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Tex\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Vera\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Verilog\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=VHDL\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Vim\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=YACC\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Go\:/opt/global/lib/gtags/universal-ctags.la:\
+	:gtags_parser=Kotlin\:/opt/global/lib/gtags/universal-ctags.la:
 
 #---------------------------------------------------------------------
 # Configuration for htags(1)

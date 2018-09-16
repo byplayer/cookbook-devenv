@@ -37,7 +37,7 @@ end
 end
 
 %w(
-  .dir_colors .globalrc .ctags .tmux.conf
+  .dir_colors .globalrc .ctags.d/kotlin.ctags tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lubuntu-rc.xml .xkbmaprc.tpl
