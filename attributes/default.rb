@@ -36,6 +36,7 @@ default['tmux']['checksum'] = 'b17cd170a94d7b58c0698752e1f4f263ab6dc47425230df7e
 # global
 default['global']['version'] = '6.6.2'
 default['global']['prefix'] = '/opt/global'
+default['global']['configure_opt'] = '--with-universal-ctags=/opt/universal-ctags/bin/ctags'
 
 # updatedb
 default['updatedb']['locate_pkg'] = 'mlocate'

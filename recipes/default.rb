@@ -25,9 +25,9 @@
   include_recipe recipe
 end
 
-%w[tmux apt global
+%w(tmux apt univercal-ctags global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout trash-cli].each do |cookbook|
+   setlayout trash-cli).each do |cookbook|
   include_recipe cookbook
 end
