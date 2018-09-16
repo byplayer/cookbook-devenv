@@ -25,7 +25,7 @@
   include_recipe recipe
 end
 
-%w(tmux apt univercal-ctags global
+%w(tmux apt universal-ctags global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
    setlayout trash-cli).each do |cookbook|
