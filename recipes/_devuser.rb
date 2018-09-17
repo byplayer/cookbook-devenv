@@ -26,6 +26,7 @@ end
 %W(
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
+  #{devenv_user_home}/.ctags.d
 ).each do |dir_name|
   directory dir_name do
     owner node['devenv']['user']['name']
