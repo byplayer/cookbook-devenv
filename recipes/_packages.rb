@@ -13,6 +13,7 @@
    emacs emacsen-common rdtool-elisp emacs-goodies-el
    emacs-mozc
    markdown
+   fonts-takao-gothic
    xfonts-shinonome python-xlib
    libterm-readkey-perl
    mlocate ssh
