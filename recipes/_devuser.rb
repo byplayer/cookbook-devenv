@@ -185,3 +185,14 @@ bash 'ruby tool' do
     ./install.sh
   EOH
 end
+
+# sdkman
+bash "install sdkman" do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
+  code <<-EOH
+    curl -s "https://get.sdkman.io" | bash
+  EOH
+  not_if    "test -f #{devenv_user_home}/.sdkman/bin/sdkman-init.sh"
+end
