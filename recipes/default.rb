@@ -21,7 +21,8 @@
    devenv::_node
    devenv::_phpenv
    devenv::_vbox-guest-utils
-   devenv::_python].each do |recipe|
+   devenv::_python
+   devenv::_vscode].each do |recipe|
   include_recipe recipe
 end
 
