@@ -7,6 +7,22 @@ user node['devenv']['user']['name'] do
   manage_home true
 end
 
+# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
+%W(
+  #{devenv_user_home}/.config
+  #{devenv_user_home}/.config/openbox
+  #{devenv_user_home}/.config/Code
+  #{devenv_user_home}/.ctags.d
+).each do |dir_name|
+  directory dir_name do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0700"
+    recursive true
+    action :create
+  end
+end
+
 ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 
 # checkout configuration dirs
@@ -19,21 +35,6 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
     checkout_branch node['devenv'][name]['checkout_branch']
     enable_submodules true
     action :sync
-  end
-end
-
-# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-%W(
-  #{devenv_user_home}/.config
-  #{devenv_user_home}/.config/openbox
-  #{devenv_user_home}/.ctags.d
-).each do |dir_name|
-  directory dir_name do
-    owner node['devenv']['user']['name']
-    group node['devenv']['user']['name']
-    mode "0700"
-    recursive true
-    action :create
   end
 end
 
