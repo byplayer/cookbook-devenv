@@ -26,7 +26,12 @@ end
 ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 
 # checkout configuration dirs
-%w(.zsh.d .emacs.d .git-extensions .ruby_tool).each do |name|
+%w(.zsh.d
+  .emacs.d
+  .git-extensions
+  .ruby_tool
+  .config/Code/Dictionaries
+).each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']
     reference node['devenv'][name]['ref']
