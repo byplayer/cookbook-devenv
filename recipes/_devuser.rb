@@ -7,10 +7,31 @@ user node['devenv']['user']['name'] do
   manage_home true
 end
 
+# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
+%W(
+  #{devenv_user_home}/.config
+  #{devenv_user_home}/.config/openbox
+  #{devenv_user_home}/.config/Code
+  #{devenv_user_home}/.ctags.d
+).each do |dir_name|
+  directory dir_name do
+    owner node['devenv']['user']['name']
+    group node['devenv']['user']['name']
+    mode "0700"
+    recursive true
+    action :create
+  end
+end
+
 ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 
 # checkout configuration dirs
-%w(.zsh.d .emacs.d .git-extensions .ruby_tool).each do |name|
+%w(.zsh.d
+  .emacs.d
+  .git-extensions
+  .ruby_tool
+  .config/Code/Dictionaries
+).each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']
     reference node['devenv'][name]['ref']
@@ -19,20 +40,6 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
     checkout_branch node['devenv'][name]['checkout_branch']
     enable_submodules true
     action :sync
-  end
-end
-
-# .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-%W(
-  #{devenv_user_home}/.config
-  #{devenv_user_home}/.config/openbox
-).each do |dir_name|
-  directory dir_name do
-    owner node['devenv']['user']['name']
-    group node['devenv']['user']['name']
-    mode "0700"
-    recursive true
-    action :create
   end
 end
 
@@ -183,4 +190,15 @@ bash 'ruby tool' do
     cd .ruby_tool
     ./install.sh
   EOH
+end
+
+# sdkman
+bash "install sdkman" do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
+  code <<-EOH
+    curl -s "https://get.sdkman.io" | bash
+  EOH
+  not_if    "test -f #{devenv_user_home}/.sdkman/bin/sdkman-init.sh"
 end

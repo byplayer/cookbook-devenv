@@ -21,6 +21,10 @@ default['devenv']['.ruby_tool']['repo'] = 'https://github.com/byplayer/ruby_tool
 default['devenv']['.ruby_tool']['ref'] = 'master'
 default['devenv']['.ruby_tool']['checkout_branch'] = 'local'
 
+default['devenv']['.config/Code/Dictionaries']['repo'] = 'https://github.com/byplayer/Dictionaries.git'
+default['devenv']['.config/Code/Dictionaries']['ref'] = 'master'
+default['devenv']['.config/Code/Dictionaries']['checkout_branch'] = 'local'
+
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
