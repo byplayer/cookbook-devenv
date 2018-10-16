@@ -29,8 +29,11 @@
    libwebkit2gtk-4.0-dev
    libid3-dev
    eblook lookup-el
-   python3-sphinx python3-pip
+   python3-sphinx
+   python3-pip
    python3-sphinxcontrib.plantuml
+   pylint3
+   python3-pytest-pylint
    postgresql postgresql-client libpq-dev
    manpages-dev
    iftop bmon iptraf nload nethogs speedometer slurm
