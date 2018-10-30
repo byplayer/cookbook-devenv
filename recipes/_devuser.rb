@@ -38,6 +38,7 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
     user node['devenv']['user']['name']
     group node['devenv']['user']['name']
     checkout_branch node['devenv'][name]['checkout_branch']
+    enable_checkout node['devenv'][name]['enable_checkout']
     enable_submodules true
     action :sync
   end

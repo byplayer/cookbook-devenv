@@ -7,23 +7,28 @@ default['devenv']['user']['ssh_authorized_keys'] = nil
 
 default['devenv']['.zsh.d']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git'
 default['devenv']['.zsh.d']['ref'] = 'master'
-default['devenv']['.zsh.d']['checkout_branch'] = 'local'
+default['devenv']['.zsh.d']['checkout_branch'] = nil
+default['devenv']['.zsh.d']['enable_checkout'] = false
 
 default['devenv']['.emacs.d']['repo'] = 'https://github.com/byplayer/dot.emacs.d.git'
 default['devenv']['.emacs.d']['ref'] = 'master'
-default['devenv']['.emacs.d']['checkout_branch'] = 'local'
+default['devenv']['.emacs.d']['checkout_branch'] = nil
+default['devenv']['.emacs.d']['enable_checkout'] = false
 
 default['devenv']['.git-extensions']['repo'] = 'https://github.com/muratayusuke/git-extensions.git'
 default['devenv']['.git-extensions']['ref'] = 'master'
-default['devenv']['.git-extensions']['checkout_branch'] = 'local'
+default['devenv']['.git-extensions']['checkout_branch'] = nil
+default['devenv']['.git-extensions']['enable_checkout'] = false
 
 default['devenv']['.ruby_tool']['repo'] = 'https://github.com/byplayer/ruby_tool.git'
 default['devenv']['.ruby_tool']['ref'] = 'master'
-default['devenv']['.ruby_tool']['checkout_branch'] = 'local'
+default['devenv']['.ruby_tool']['checkout_branch'] = nil
+default['devenv']['.ruby_tool']['enable_checkout'] = false
 
 default['devenv']['.config/Code/Dictionaries']['repo'] = 'https://github.com/byplayer/Dictionaries.git'
 default['devenv']['.config/Code/Dictionaries']['ref'] = 'master'
-default['devenv']['.config/Code/Dictionaries']['checkout_branch'] = 'local'
+default['devenv']['.config/Code/Dictionaries']['checkout_branch'] = nil
+default['devenv']['.config/Code/Dictionaries']['enable_checkout'] = false
 
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
