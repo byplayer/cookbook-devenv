@@ -12,6 +12,7 @@ end
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
   #{devenv_user_home}/.config/Code
+  #{devenv_user_home}/.config/gtk-3.0
   #{devenv_user_home}/.ctags.d
 ).each do |dir_name|
   directory dir_name do
@@ -48,7 +49,9 @@ end
   .dir_colors .globalrc .ctags.d/kotlin.ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
-  .config/openbox/lubuntu-rc.xml .xkbmaprc.tpl
+  .config/openbox/lubuntu-rc.xml
+  .config/gtk-3.0/settings.ini
+  .xkbmaprc.tpl
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
