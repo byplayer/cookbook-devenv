@@ -19,7 +19,6 @@
    devenv::_docker
    devenv::_devuser
    devenv::_node
-   devenv::_phpenv
    devenv::_vbox-guest-utils
    devenv::_python
    devenv::_vscode].each do |recipe|
