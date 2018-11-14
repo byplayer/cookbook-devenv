@@ -7,6 +7,7 @@
    libx11-dev
    libgmp3-dev
    chromium-browser
+   cpanminus
    wget ncftp ntp nmap
    ibus-mozc mozc-server mozc-utils-gui
    exuberant-ctags
