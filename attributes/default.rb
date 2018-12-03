@@ -62,6 +62,3 @@ default['docker_compose']['release'] = '1.18.0'
 # knife config
 default['devenv']['user']['knife_config'] = nil
 default['devenv']['user']['knife_key'] = nil
-
-# kubectl
-default['kubectl']['version'] = '1.12.3'
