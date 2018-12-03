@@ -28,6 +28,6 @@ end
 %w(tmux apt universal-ctags global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout trash-cli kubectl).each do |cookbook|
+   setlayout trash-cli).each do |cookbook|
   include_recipe cookbook
 end
