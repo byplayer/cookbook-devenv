@@ -173,16 +173,14 @@ bash 'copy dic' do
 end
 
 # emacs env
-bash 'cleanup .emacs.d elc' do
+bash 'setup emacs hooks' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
 
   code <<-EOH
-    find #{devenv_user_home}/.emacs.d -name '*.elc' | xargs rm
-    find #{devenv_user_home}/.emacs.d -type d -empty | grep -v .git | xargs rm -r ; echo rm empty dir in .emacs.d
+    cd .emacs.d
+    ./git_hooks/hooks/post-merge
   EOH
-
-  only_if "find #{devenv_user_home}/.emacs.d -name '*.elc' | grep elc"
 end
 
 # ruby tool
