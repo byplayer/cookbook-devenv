@@ -39,11 +39,11 @@ default['devenv']['nvm']['ref'] = 'v0.33.11'
 # tmux
 default['tmux']['install_method'] = 'source'
 default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
-default['tmux']['version'] = '2.6'
-default['tmux']['checksum'] = 'b17cd170a94d7b58c0698752e1f4f263ab6dc47425230df7e53a6435cc7cd7e8'
+default['tmux']['version'] = '2.8'
+default['tmux']['checksum'] = '7f6bf335634fafecff878d78de389562ea7f73a7367f268b66d37ea13617a2ba'
 
 # global
-default['global']['version'] = '6.6.2'
+default['global']['version'] = '6.6.3'
 default['global']['prefix'] = '/opt/global'
 default['global']['configure_opt'] = '--with-universal-ctags=/opt/universal-ctags/bin/ctags'
 
