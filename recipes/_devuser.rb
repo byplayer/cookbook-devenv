@@ -11,7 +11,6 @@ end
 %W(
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
-  #{devenv_user_home}/.config/Code
   #{devenv_user_home}/.config/gtk-3.0
   #{devenv_user_home}/.ctags.d
 ).each do |dir_name|
@@ -31,7 +30,6 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   .emacs.d
   .git-extensions
   .ruby_tool
-  .config/Code/Dictionaries
 ).each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']

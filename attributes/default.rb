@@ -25,11 +25,6 @@ default['devenv']['.ruby_tool']['ref'] = 'master'
 default['devenv']['.ruby_tool']['checkout_branch'] = nil
 default['devenv']['.ruby_tool']['enable_checkout'] = false
 
-default['devenv']['.config/Code/Dictionaries']['repo'] = 'https://github.com/byplayer/Dictionaries.git'
-default['devenv']['.config/Code/Dictionaries']['ref'] = 'master'
-default['devenv']['.config/Code/Dictionaries']['checkout_branch'] = nil
-default['devenv']['.config/Code/Dictionaries']['enable_checkout'] = false
-
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
