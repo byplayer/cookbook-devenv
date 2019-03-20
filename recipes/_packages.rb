@@ -23,6 +23,7 @@
    libgif-dev
    libmcrypt-dev
    libffi-dev
+   libclang-dev
    libcurl4-gnutls-dev
    libgnutls28-dev
    libgtk-3-dev
