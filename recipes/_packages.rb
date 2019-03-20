@@ -42,7 +42,6 @@
    iptraf tcptrack vnstat bwm-ng cbm pktstat netdiag
    ifstat nmon saidar
    jq whois
-   irony-server
    nginx
    tokyotyrant tokyocabinet-bin libtokyotyrant-dev
    postfix
