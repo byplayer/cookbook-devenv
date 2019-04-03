@@ -46,7 +46,7 @@ default['global']['configure_opt'] = '--with-universal-ctags=/opt/universal-ctag
 default['updatedb']['locate_pkg'] = 'mlocate'
 
 # go
-default['go']['version'] = '1.10.3'
+default['go']['version'] = '1.12.1'
 
 # rbenv
 default['rbenv']['rubies'] = []
