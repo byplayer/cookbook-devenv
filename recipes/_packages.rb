@@ -15,11 +15,12 @@
     curl
     dkms
     eblook lookup-el
-    emacs
     emacs-goodies-el
     emacs-mozc
+    emacs25-common-non-dfsg
     emacsen-common
     expect
+    emacs
     exuberant-ctags
     fonts-takao-gothic
     gnome-terminal
