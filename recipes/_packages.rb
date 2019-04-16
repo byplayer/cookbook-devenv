@@ -55,6 +55,8 @@
     libsnappy-dev
     libsqlite3-dev
     libstdc++6:i386
+    libstdc++-8-dev
+    libstdc++-8-doc
     libterm-readkey-perl
     libtiff-dev
     libtokyotyrant-dev
