@@ -112,7 +112,6 @@
     wget
     whois
     xclip
-    xfconf
     xfonts-shinonome
     xvfb
     zlib1g-dev
