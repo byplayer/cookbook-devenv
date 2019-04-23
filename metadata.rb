@@ -10,6 +10,6 @@ version          '0.1.0'
 %w[tmux apt universal-ctags global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   setlayout golang rbenv trash-cli kubectl].each do |cookbook|
+   golang rbenv trash-cli kubectl].each do |cookbook|
   depends cookbook
 end
