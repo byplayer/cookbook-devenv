@@ -11,6 +11,7 @@ end
 %W(
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
+  #{devenv_user_home}/.config/lxqt
   #{devenv_user_home}/.config/gtk-3.0
   #{devenv_user_home}/.ctags.d
 ).each do |dir_name|
@@ -48,6 +49,7 @@ end
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lxqt-rc.xml
+  .config/lxqt/panel.conf
   .config/gtk-3.0/settings.ini
   .xkbmaprc.tpl
 ).each do |name|
