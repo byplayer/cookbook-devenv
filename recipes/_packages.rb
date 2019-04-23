@@ -60,7 +60,6 @@
     libtiff-dev
     libtokyotyrant-dev
     libtool
-    libvirt-bin
     libwebkit2gtk-4.0-dev
     libx11-dev
     libxml2-dev
