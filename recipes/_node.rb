@@ -1,4 +1,4 @@
-%w(libcurl3 curl libssl-dev).each do |pkg|
+%w(curl libssl-dev).each do |pkg|
   package pkg do
     action :install
   end
