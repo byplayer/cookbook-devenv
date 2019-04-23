@@ -17,7 +17,7 @@
     eblook lookup-el
     emacs-goodies-el
     emacs-mozc
-    emacs25-common-non-dfsg
+    emacs-common-non-dfsg
     emacsen-common
     expect
     emacs
