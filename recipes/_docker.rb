@@ -1,4 +1,4 @@
-docker_installation_package do
+docker_installation_package 'default' do
   repo_channel 'nightly'
 end
 
