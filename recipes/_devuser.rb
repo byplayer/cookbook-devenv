@@ -47,7 +47,7 @@ end
   .dir_colors .globalrc .ctags.d/kotlin.ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
-  .config/openbox/lubuntu-rc.xml
+  .config/openbox/lxqt-rc.xml
   .config/gtk-3.0/settings.ini
   .xkbmaprc.tpl
 ).each do |name|
