@@ -181,7 +181,7 @@ bash 'setup emacs hooks' do
 
   code <<-EOH
     cd .emacs.d
-    ./git_hooks/hooks/post-merge
+    ./git_hooks/post-merge
   EOH
 end
 
