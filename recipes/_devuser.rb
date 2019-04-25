@@ -60,7 +60,8 @@ end
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
     variables git_user_name: node['devenv']['git']['user_name'],
-              git_user_email: node['devenv']['git']['user_email']
+              git_user_email: node['devenv']['git']['user_email'],
+              git_signing_key: node['devenv']['git']['signing_key']
     action :create
   end
 end
