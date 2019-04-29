@@ -28,6 +28,8 @@ default['devenv']['.ruby_tool']['enable_checkout'] = false
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
+default['devenv']['gpg'] = {}
+
 default['devenv']['nvm']['repos'] = 'https://github.com/creationix/nvm.git'
 default['devenv']['nvm']['ref'] = 'v0.33.11'
 
