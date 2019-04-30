@@ -54,7 +54,7 @@ default['go']['version'] = '1.12.1'
 default['rbenv']['rubies'] = []
 
 # docker-compose
-default['docker_compose']['release'] = '1.18.0'
+default['docker_compose']['release'] = '1.24.0'
 
 # knife config
 default['devenv']['user']['knife_config'] = nil
