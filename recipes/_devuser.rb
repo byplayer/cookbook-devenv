@@ -56,6 +56,7 @@ end
   .config/gtk-3.0/settings.ini
   .xkbmaprc.tpl
   .gnupg/gpg.conf
+  .rufo
 ).each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
