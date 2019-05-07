@@ -16,7 +16,6 @@ jar_base_name = File.basename(jar_url)
 remote_file File.join(Chef::Config['file_cache_path'], jar_base_name) do
   source jar_url
   checksum node['google-java-format']['checksum']
-  notifies :run, 'bash[install_google-java-format]', :immediately
 end
 
 bash 'install_google-java-format' do
@@ -27,4 +26,6 @@ bash 'install_google-java-format' do
     cp #{jar_base_name} #{install_path}
     chmod 0755 #{install_path}
   EOH
+
+  not_if File.exist?(install_path) && Digest::SHA256.file(install_path) == node['google-java-format']['checksum']
 end
