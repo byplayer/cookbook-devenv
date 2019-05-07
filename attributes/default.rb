@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 default['devenv']['locale'] = 'en_US.UTF-8'
 default['devenv']['user']['name'] = 'devuser'
 default['devenv']['user']['shell'] = '/usr/bin/zsh'
@@ -35,7 +37,7 @@ default['devenv']['nvm']['ref'] = 'v0.33.11'
 
 # tmux
 default['tmux']['install_method'] = 'source'
-default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
+default['tmux']['configure_options'] = %w[--prefix=/opt/tmux]
 default['tmux']['version'] = '2.8'
 default['tmux']['checksum'] = '7f6bf335634fafecff878d78de389562ea7f73a7367f268b66d37ea13617a2ba'
 
@@ -62,3 +64,8 @@ default['devenv']['user']['knife_key'] = nil
 
 # kubectl
 default['kubectl']['version'] = '1.12.3'
+
+# google-java-format
+default['google-java-format']['version'] = '1.7'
+default['google-java-format']['checksum'] = '0894ee02019ee8b4acd6df09fb50bac472e7199e1a5f041f8da58d08730694aa'
+default['google-java-format']['install_dir'] = '/opt/google-java-format'
