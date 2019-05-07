@@ -20,7 +20,6 @@ end
 
 bash 'install_google-java-format' do
   user 'root'
-  action :nothing
   cwd  Chef::Config['file_cache_path']
   code <<-EOH
     cp #{jar_base_name} #{install_path}
