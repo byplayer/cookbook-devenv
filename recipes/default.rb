@@ -16,6 +16,7 @@
   devenv::_locales
   devenv::_timezone
   devenv::_git
+  devenv::_gnome_keyring
   devenv::_google-java-format
   devenv::_packages
   devenv::_rbenv
