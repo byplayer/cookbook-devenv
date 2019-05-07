@@ -26,5 +26,5 @@ bash 'install_google-java-format' do
     chmod 0755 #{install_path}
   EOH
 
-  not_if File.exist?(install_path) && Digest::SHA256.file(install_path) == node['google-java-format']['checksum']
+  not_if { File.exist?(install_path) && Digest::SHA256.file(install_path) == node['google-java-format']['checksum'] }
 end
