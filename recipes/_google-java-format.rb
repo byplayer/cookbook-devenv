@@ -13,7 +13,7 @@ jar_url = "https://github.com/google/google-java-format/releases/download/google
 install_path = File.join(node['google-java-format']['install_dir'], 'google-java-format')
 
 jar_base_name = File.basename(jar_url)
-remote_file jar_base_name do
+remote_file File.join(Chef::Config['file_cache_path'], jar_base_name) do
   source jar_url
   checksum node['google-java-format']['checksum']
   notifies :run, 'bash[install_google-java-format]', :immediately
