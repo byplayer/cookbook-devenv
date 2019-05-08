@@ -205,6 +205,17 @@ bash 'ruby tool' do
   EOH
 end
 
+# install node_tool
+bash 'nstall node tool' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+
+  code <<-EOH
+    cd .node_tool
+    ./install.sh
+  EOH
+end
+
 # sdkman
 bash 'install sdkman' do
   cwd devenv_user_home
