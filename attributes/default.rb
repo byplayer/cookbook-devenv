@@ -35,6 +35,8 @@ default['devenv']['.node_tool']['enable_checkout'] = false
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
+default['devenv']['gpg'] = {}
+
 default['devenv']['nvm']['repos'] = 'https://github.com/creationix/nvm.git'
 default['devenv']['nvm']['ref'] = 'v0.33.11'
 
@@ -59,7 +61,7 @@ default['go']['version'] = '1.12.1'
 default['rbenv']['rubies'] = []
 
 # docker-compose
-default['docker_compose']['release'] = '1.18.0'
+default['docker_compose']['release'] = '1.24.0'
 
 # knife config
 default['devenv']['user']['knife_config'] = nil
@@ -67,3 +69,8 @@ default['devenv']['user']['knife_key'] = nil
 
 # kubectl
 default['kubectl']['version'] = '1.12.3'
+
+# google-java-format
+default['google-java-format']['version'] = '1.7'
+default['google-java-format']['checksum'] = '0894ee02019ee8b4acd6df09fb50bac472e7199e1a5f041f8da58d08730694aa'
+default['google-java-format']['install_dir'] = '/opt/google-java-format/bin'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # Cookbook Name:: devenv
 # Recipe:: default
@@ -8,25 +10,28 @@
 #
 
 %w[
-   golang
-   golang::packages
-   devenv::_network
-   devenv::_locales
-   devenv::_timezone
-   devenv::_git
-   devenv::_packages
-   devenv::_rbenv
-   devenv::_docker
-   devenv::_devuser
-   devenv::_node
-   devenv::_vbox-guest-utils
-   devenv::_python].each do |recipe|
+  golang
+  golang::packages
+  devenv::_network
+  devenv::_locales
+  devenv::_timezone
+  devenv::_git
+  devenv::_gnome_keyring
+  devenv::_google-java-format
+  devenv::_packages
+  devenv::_rbenv
+  devenv::_docker
+  devenv::_devuser
+  devenv::_node
+  devenv::_vbox-guest-utils
+  devenv::_python
+].each do |recipe|
   include_recipe recipe
 end
 
-%w(tmux apt universal-ctags global
+%w[tmux apt universal-ctags global
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   trash-cli kubectl).each do |cookbook|
+   trash-cli kubectl].each do |cookbook|
   include_recipe cookbook
 end

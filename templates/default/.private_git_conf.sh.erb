@@ -5,3 +5,13 @@ set -eu
 git config user.name <%= @git_user_name %>
 git config user.email <%= @git_user_email %>
 git config user.signingkey <%= @git_signing_key %>
+
+# verify
+echo -n user.name:
+git config user.name
+
+echo -n user.email:
+git config user.email
+
+echo -n user.signingkey:
+git config user.signingkey

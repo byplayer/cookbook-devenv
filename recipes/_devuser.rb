@@ -17,6 +17,7 @@ end
   #{devenv_user_home}/.config/qterminal.org
   #{devenv_user_home}/.config/gtk-3.0
   #{devenv_user_home}/.ctags.d
+  #{devenv_user_home}/.gnupg
 ].each do |dir_name|
   directory dir_name do
     owner node['devenv']['user']['name']
@@ -56,6 +57,7 @@ end
   .config/qterminal.org/qterminal.ini
   .config/gtk-3.0/settings.ini
   .xkbmaprc.tpl
+  .gnupg/gpg.conf
 ].each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
@@ -63,7 +65,8 @@ end
     group node['devenv']['user']['name']
     variables git_user_name: node['devenv']['git']['user_name'],
               git_user_email: node['devenv']['git']['user_email'],
-              git_signing_key: node['devenv']['git']['signing_key']
+              git_signing_key: node['devenv']['git']['signing_key'],
+              gpg_default_key: node['devenv']['gpg']['default_key']
     action :create
   end
 end
