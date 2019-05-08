@@ -209,6 +209,7 @@ end
 bash 'nstall node tool' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
   environment ({ 'HOME' => devenv_user_home })
 
   code <<-EOH
