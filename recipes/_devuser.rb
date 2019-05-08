@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 devenv_user_home = "/home/#{node['devenv']['user']['name']}"
 
 user node['devenv']['user']['name'] do
@@ -8,18 +10,18 @@ user node['devenv']['user']['name'] do
 end
 
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
-%W(
+%W[
   #{devenv_user_home}/.config
   #{devenv_user_home}/.config/openbox
   #{devenv_user_home}/.config/lxqt
   #{devenv_user_home}/.config/qterminal.org
   #{devenv_user_home}/.config/gtk-3.0
   #{devenv_user_home}/.ctags.d
-).each do |dir_name|
+].each do |dir_name|
   directory dir_name do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
-    mode "0700"
+    mode '0700'
     recursive true
     action :create
   end
@@ -28,11 +30,11 @@ end
 ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 
 # checkout configuration dirs
-%w(.zsh.d
-  .emacs.d
-  .git-extensions
-  .ruby_tool
-).each do |name|
+%w[.zsh.d
+   .emacs.d
+   .git-extensions
+   .ruby_tool
+   .node_tool].each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']
     reference node['devenv'][name]['ref']
@@ -45,7 +47,7 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
   end
 end
 
-%w(
+%w[
   .dir_colors .globalrc .ctags.d/kotlin.ctags .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
@@ -54,7 +56,7 @@ end
   .config/qterminal.org/qterminal.ini
   .config/gtk-3.0/settings.ini
   .xkbmaprc.tpl
-).each do |name|
+].each do |name|
   template "#{devenv_user_home}/#{name}" do
     source "#{name}.erb"
     owner node['devenv']['user']['name']
@@ -77,10 +79,10 @@ end
 #   EOH
 # end
 
-%w(
+%w[
   .xsessionrc
   .private_git_conf.sh
-).each do |name|
+].each do |name|
   template "#{devenv_user_home}/#{name}" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
@@ -95,7 +97,7 @@ end
 directory "#{devenv_user_home}/.ssh" do
   owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  mode "0755"
+  mode '0755'
   action :create
 end
 
@@ -103,17 +105,16 @@ template "#{devenv_user_home}/.ssh/config" do
   source '.ssh/config.erb'
   owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  mode "0600"
+  mode '0600'
   action :create
 end
-
 
 if node['devenv']['user']['ssh_key_file']
   file "#{devenv_user_home}/.ssh/id_rsa" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
-    mode "0600"
-    content File.open(node['devenv']['user']['ssh_key_file']) { |f| f.read }
+    mode '0600'
+    content File.open(node['devenv']['user']['ssh_key_file'], &:read)
     action :create
   end
 end
@@ -122,8 +123,8 @@ if node['devenv']['user']['ssh_authorized_keys']
   file "#{devenv_user_home}/.ssh/authorized_keys" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
-    mode "0600"
-    content File.open(node['devenv']['user']['ssh_authorized_keys']) { |f| f.read }
+    mode '0600'
+    content File.open(node['devenv']['user']['ssh_authorized_keys'], &:read)
     action :create
   end
 end
@@ -131,7 +132,7 @@ end
 directory "#{devenv_user_home}/.chef" do
   owner node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  mode "0755"
+  mode '0755'
   action :create
 end
 
@@ -139,7 +140,7 @@ if node['devenv']['user']['knife_config']
   file "#{devenv_user_home}/.chef/knife.rb" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
-    content File.open(node['devenv']['user']['knife_config']) { |f| f.read }
+    content File.open(node['devenv']['user']['knife_config'], &:read)
     action :create
   end
 end
@@ -148,20 +149,20 @@ if node['devenv']['user']['knife_key']
   file "#{devenv_user_home}/.chef/knife.pem" do
     owner node['devenv']['user']['name']
     group node['devenv']['user']['name']
-    mode "0600"
-    content File.open(node['devenv']['user']['knife_key']) { |f| f.read }
+    mode '0600'
+    content File.open(node['devenv']['user']['knife_key'], &:read)
     action :create
   end
 end
 
 group 'sudo' do
   members ['vagrant', node['devenv']['user']['name']]
-  action [:create, :manage]
+  action %i[create manage]
 end
 
 group 'vagrant' do
   members [node['devenv']['user']['name']]
-  action [:create, :manage]
+  action %i[create manage]
 end
 
 group 'docker' do
@@ -202,12 +203,12 @@ bash 'ruby tool' do
 end
 
 # sdkman
-bash "install sdkman" do
+bash 'install sdkman' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   environment ({ 'HOME' => devenv_user_home })
   code <<-EOH
     curl -s "https://get.sdkman.io" | bash
   EOH
-  not_if    "test -f #{devenv_user_home}/.sdkman/bin/sdkman-init.sh"
+  not_if "test -f #{devenv_user_home}/.sdkman/bin/sdkman-init.sh"
 end

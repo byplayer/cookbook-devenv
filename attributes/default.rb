@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 default['devenv']['locale'] = 'en_US.UTF-8'
 default['devenv']['user']['name'] = 'devuser'
 default['devenv']['user']['shell'] = '/usr/bin/zsh'
@@ -25,6 +27,11 @@ default['devenv']['.ruby_tool']['ref'] = 'master'
 default['devenv']['.ruby_tool']['checkout_branch'] = nil
 default['devenv']['.ruby_tool']['enable_checkout'] = false
 
+default['devenv']['.node_tool']['repo'] = 'https://github.com/byplayer/node_tool.git'
+default['devenv']['.node_tool']['ref'] = 'master'
+default['devenv']['.node_tool']['checkout_branch'] = nil
+default['devenv']['.node_tool']['enable_checkout'] = false
+
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
@@ -33,7 +40,7 @@ default['devenv']['nvm']['ref'] = 'v0.33.11'
 
 # tmux
 default['tmux']['install_method'] = 'source'
-default['tmux']['configure_options'] = %w(--prefix=/opt/tmux)
+default['tmux']['configure_options'] = %w[--prefix=/opt/tmux]
 default['tmux']['version'] = '2.8'
 default['tmux']['checksum'] = '7f6bf335634fafecff878d78de389562ea7f73a7367f268b66d37ea13617a2ba'
 
