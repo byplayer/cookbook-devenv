@@ -69,8 +69,3 @@ default['devenv']['user']['knife_key'] = nil
 
 # kubectl
 default['kubectl']['version'] = '1.12.3'
-
-# google-java-format
-default['google-java-format']['version'] = '1.7'
-default['google-java-format']['checksum'] = '0894ee02019ee8b4acd6df09fb50bac472e7199e1a5f041f8da58d08730694aa'
-default['google-java-format']['install_dir'] = '/opt/google-java-format/bin'
