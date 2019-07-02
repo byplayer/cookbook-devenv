@@ -206,7 +206,7 @@ bash 'ruby tool' do
 end
 
 # install node_tool
-bash 'nstall node tool' do
+bash 'install node tool' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
