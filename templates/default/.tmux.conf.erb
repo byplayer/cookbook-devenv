@@ -4,21 +4,16 @@ bind C-x send-prefix
 unbind-key C-b
 
 # status
-set -g status-fg black
-set -g status-bg white
-set -g status-attr default
+set -g status-style fg=black,bg=white
 set -g display-time 3000
 
 # command/message line colors
-set -g message-fg black
-set -g message-bg white
-set -g message-attr bright
-set -g pane-border-fg white
-set -g pane-active-border-fg white
+set -g message-style fg=black,bg=white,bright
+set -g pane-border-style fg=white
+set -g pane-active-border-style fg=white
 # set -g pane-active-border-bg black
 
-set-window-option -g mode-fg black
-set-window-option -g mode-bg white
+set-window-option -g mode-style fg=black,bg=white
 
 # select pane on mouse
 set-option -g mouse on
