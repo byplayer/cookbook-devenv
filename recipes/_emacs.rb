@@ -9,6 +9,10 @@ end
 execute "Extracting and Building emacs #{node['emacs']['version']} from Source" do
   cwd Chef::Config['file_cache_path']
   command <<-COMMAND
+    if [ -d emacs-#{node['emacs']['version']} ]; then
+      rm -f emacs-#{node['emacs']['version']}
+    fi
+
     tar xzf emacs-#{node['emacs']['version']}.tar.gz
     cd emacs-#{node['emacs']['version']}
     ./configure --prefix=#{node['emacs']['prefix']}
