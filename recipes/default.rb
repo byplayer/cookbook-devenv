@@ -24,6 +24,7 @@
   devenv::_node
   devenv::_vbox-guest-utils
   devenv::_python
+  devenv::_emacs
 ].each do |recipe|
   include_recipe recipe
 end
