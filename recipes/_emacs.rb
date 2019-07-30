@@ -15,10 +15,10 @@ execute "Extracting and Building emacs #{node['emacs']['version']} from Source" 
 
     tar xzf emacs-#{node['emacs']['version']}.tar.gz
     cd emacs-#{node['emacs']['version']}
-    ./configure --prefix=#{node['emacs']['prefix']}
+    ./configure --prefix=#{node['emacs']['install_dir']}
     make
     make install
   COMMAND
-  creates "#{node['emacs']['prefix']}/bin/emacs"
-  not_if "#{node['emacs']['prefix']}/bin/emacs --version | grep #{node['emacs']['version']}"
+  creates "#{node['emacs']['install_dir']}/bin/emacs"
+  not_if "#{node['emacs']['install_dir']}/bin/emacs --version | grep #{node['emacs']['version']}"
 end
