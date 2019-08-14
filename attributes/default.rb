@@ -69,3 +69,7 @@ default['devenv']['user']['knife_key'] = nil
 
 # kubectl
 default['kubectl']['version'] = '1.12.3'
+
+# emacs
+default['emacs']['version'] = '26.2'
+default['emacs']['install_dir'] = '/opt/emacs'

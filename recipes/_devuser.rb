@@ -49,7 +49,8 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 end
 
 %w[
-  .dir_colors .globalrc .ctags.d/kotlin.ctags .tmux.conf
+  .dir_colors .globalrc .ctags.d/kotlin.ctags .prettierrc
+  .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lxqt-rc.xml
