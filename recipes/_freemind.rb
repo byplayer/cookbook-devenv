@@ -3,7 +3,7 @@
 remote_file "#{Chef::Config['file_cache_path']}/freemind-bin-max-#{node['freemind']['version']}.zip" do
   source "https://jaist.dl.sourceforge.net/project/freemind/freemind/#{node['freemind']['version']}/freemind-bin-max-#{node['freemind']['version']}.zip"
   mode 0o0644
-  not_if "#{Chef::Config['file_cache_path']}/freemind-bin-max-#{node['freemind']['version']}.zip"
+  not_if File.exist?("#{Chef::Config['file_cache_path']}/freemind-bin-max-#{node['freemind']['version']}.zip")
 end
 
 execute "install freemind ver. #{node['freemind']['version']}" do
