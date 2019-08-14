@@ -12,7 +12,7 @@ execute "install freemind ver. #{node['freemind']['version']}" do
     if [ -s #{node['freemind']['install_target']} ]; then
       rm #{node['freemind']['install_target']}
     fi
-    unzip "#{Chef::Config['file_cache_path']}/freemind-bin-max-#{node['freemind']['version']}.zip -d #{node['freemind']['install_target']}-#{node['freemind']['version']}
+    unzip #{Chef::Config['file_cache_path']}/freemind-bin-max-#{node['freemind']['version']}.zip -d #{node['freemind']['install_target']}-#{node['freemind']['version']}
     ln -s #{node['freemind']['install_target']}-#{node['freemind']['version']} #{node['freemind']['install_target']}
     chmod a+x #{node['freemind']['install_target']}/freemind.sh
     ln -s #{node['freemind']['install_target']}/freemind.sh #{node['freemind']['install_target']}/freemind
