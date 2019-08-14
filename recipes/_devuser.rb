@@ -52,6 +52,7 @@ end
   .dir_colors .globalrc .ctags.d/kotlin.ctags .prettierrc
   .tmux.conf
   .Xresources .gitconfig .xprofile .zshrc
+  .gitcommit_template.txt
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lxqt-rc.xml
   .config/lxqt/panel.conf
