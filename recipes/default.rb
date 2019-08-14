@@ -12,7 +12,7 @@
 %w[
   golang
   golang::packages
-  devenf::_freemind
+  devenv::_freemind
   devenv::_network
   devenv::_locales
   devenv::_timezone
