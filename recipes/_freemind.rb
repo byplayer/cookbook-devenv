@@ -18,5 +18,5 @@ execute "install freemind ver. #{node['freemind']['version']}" do
     ln -s #{node['freemind']['install_target']}/freemind.sh #{node['freemind']['install_target']}/freemind
   COMMAND
   creates "#{node['freemind']['install_target']}-#{node['freemind']['version']}"
-  not_if File.exist?("#{node['freemind']['install_target']}-#{node['freemind']['version']}")
+  not_if "test -d #{node['freemind']['install_target']}-#{node['freemind']['version']}"
 end
