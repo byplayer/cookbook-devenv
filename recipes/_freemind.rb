@@ -13,7 +13,7 @@ execute "install freemind ver. #{node['freemind']['version']}" do
       rm #{node['freemind']['install_target']}
     fi
     unzip "#{Chef::Config['file_cache_path']}/freemind-bin-max-#{node['freemind']['version']}.zip -d #{node['freemind']['install_target']}-#{node['freemind']['version']}
-    ln -s ln -s #{node['freemind']['install_target']}-#{node['freemind']['version']} #{node['freemind']['install_target']}
+    ln -s #{node['freemind']['install_target']}-#{node['freemind']['version']} #{node['freemind']['install_target']}
   COMMAND
   creates "#{node['freemind']['install_target']}-#{node['freemind']['version']}"
   not_if File.exist?("#{node['freemind']['install_target']}-#{node['freemind']['version']}")
