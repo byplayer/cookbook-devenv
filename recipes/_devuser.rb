@@ -180,9 +180,19 @@ bash 'copy dic' do
 
   code <<-EOH
     mkdir -p ./dic
-    rsync -av --delete /vagrant/dic/ ./dic/
+    rsync -av --delete /vagrant/user_data/dic/ ./dic/
     chown -R #{node['devenv']['user']['name']}:#{node['devenv']['user']['name']} dic
   EOH
+end
+
+if File.exist?('/vagrant/user_data/.members')
+  bash 'copy member list' do
+    cwd devenv_user_home
+    user node['devenv']['user']['name']
+    code <<-EOH
+         cp /vagrant/user_data/.members #{devenv_user_home}/.members
+    EOH
+  end
 end
 
 # emacs env
