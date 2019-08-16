@@ -185,14 +185,14 @@ bash 'copy dic' do
   EOH
 end
 
-if File.exist?('/vagrant/user_data/.members')
-  bash 'copy member list' do
-    cwd devenv_user_home
-    user node['devenv']['user']['name']
-    code <<-EOH
-         cp /vagrant/user_data/.members #{devenv_user_home}/.members
-    EOH
-  end
+bash 'copy member list' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+  code <<-EOH
+    if [ -f /vagrant/user_data/.members ]; then
+      cp /vagrant/user_data/.members #{devenv_user_home}/.members
+    fi
+  EOH
 end
 
 # emacs env
