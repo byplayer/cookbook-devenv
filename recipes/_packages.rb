@@ -24,6 +24,7 @@
   expect
   emacs
   exuberant-ctags
+  fonts-emojione
   fonts-takao-gothic
   gnome-terminal
   ibus-mozc
