@@ -49,6 +49,7 @@
   libgroonga-dev
   libgtk-3-dev
   libid3-dev
+  libmagickwand-dev
   libmcrypt-dev
   libncurses5-dev
   libncurses5:i386
