@@ -12,7 +12,7 @@ directory node['emojify']['install_target'] do
 end
 
 file File.join(node['emojify']['install_target'], 'emojify') do
-  content File.read(File.join(Chef::Config['file_cache_path'], 'emojify', 'emojify'))
+  content lazy { File.read(File.join(Chef::Config['file_cache_path'], 'emojify', 'emojify')) }
   mode '0755'
   action :create
 end
