@@ -8,9 +8,9 @@
 	sm = submodule
 	ci = commit
 	cia = commit --amend
-	l = log
-	lo = log --oneline
-	lg = log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<<%= '%' %>an>%Creset' --abbrev-commit --date=short --branches
+	l = ! git log --color | emojify | less
+	lo = ! git log --oneline --color | emojify | less
+	lg = ! git log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<<%= '%' %>an>%Creset' --abbrev-commit --date=short --branches --color | emojify | less
 	dt = difftool
 	dc = diff --check
 	mt = mergetool
