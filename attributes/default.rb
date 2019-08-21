@@ -77,3 +77,8 @@ default['emacs']['install_dir'] = '/opt/emacs'
 # freemind
 default['freemind']['version'] = '1.0.0'
 default['freemind']['install_target'] = '/opt/freemind'
+
+# emojify
+default['emojify']['repo'] = 'https://github.com/mrowa44/emojify.git'
+default['emojify']['ref'] = 'master'
+default['emojify']['install_target'] = '/opt/emojify'
