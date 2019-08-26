@@ -19,9 +19,10 @@ end
 end
 
 execute 'install fzf' do
-  cwd Chef::Config['file_cache_path']
+  cwd File.join(Chef::Config['file_cache_path'], 'fzf')
   command <<-COMMAND
-    cd fzf
+    export PATH=$PATH:/usr/local/go/bin:$GOBIN
+
     go build
     cp fzf #{File.join(node['fzf']['install_target'], 'bin')}/
     cp shell/* #{File.join(node['fzf']['install_target'], 'shell')}/
