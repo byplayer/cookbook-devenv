@@ -24,6 +24,7 @@ execute 'install fzf' do
     export PATH=$PATH:/usr/local/go/bin:$GOBIN
 
     go build
+    cp bin/fzf-tmux #{File.join(node['fzf']['install_target'], 'bin')}/
     cp fzf #{File.join(node['fzf']['install_target'], 'bin')}/
     cp shell/* #{File.join(node['fzf']['install_target'], 'shell')}/
     rsync -avC --delete ./man/ #{File.join(node['fzf']['install_target'], 'man')}/
