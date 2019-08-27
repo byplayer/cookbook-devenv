@@ -35,7 +35,8 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
    .emacs.d
    .git-extensions
    .ruby_tool
-   .node_tool].each do |name|
+   .node_tool
+   .highlight].each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']
     reference node['devenv'][name]['ref']

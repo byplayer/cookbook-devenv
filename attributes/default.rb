@@ -32,6 +32,11 @@ default['devenv']['.node_tool']['ref'] = 'master'
 default['devenv']['.node_tool']['checkout_branch'] = nil
 default['devenv']['.node_tool']['enable_checkout'] = false
 
+default['devenv']['.highlight']['repo'] = 'https://github.com/byplayer/dot.highlight.git'
+default['devenv']['.highlight']['ref'] = 'master'
+default['devenv']['.highlight']['checkout_branch'] = nil
+default['devenv']['.highlight']['enable_checkout'] = false
+
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 
