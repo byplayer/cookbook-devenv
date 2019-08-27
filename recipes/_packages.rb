@@ -27,6 +27,7 @@
   fonts-emojione
   fonts-takao-gothic
   gnome-terminal
+  highlight
   ibus-mozc
   ifstat
   iftop
