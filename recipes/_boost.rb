@@ -19,7 +19,7 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
     ./b2 toolset=gcc -link=static,shared runtime-link=shared threading=multi variant=release --stagedir="stage/gcc"
     ./bootstrap.sh --with-toolset=clang
     ./b2 toolset=clang -link=static,shared runtime-link=shared threading=multi variant=release --stagedir="stage/clang"
-
+    rm -r bin.v2
     cd ../
     ln -s boost_#{node['boost']['version']&.tr('.', '_')} boost
   COMMAND
