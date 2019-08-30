@@ -92,3 +92,11 @@ default['emojify']['install_target'] = '/opt/emojify'
 default['fzf']['repo'] = 'https://github.com/junegunn/fzf.git'
 default['fzf']['ref'] = 'master'
 default['fzf']['install_target'] = '/opt/fzf'
+
+# boost
+default['boost']['version'] = '1.71.0'
+
+# install
+#   node['boost']['install_base']/boost
+#   node['boost']['install_base']/boost-${version}
+default['boost']['install_base'] = '/opt'

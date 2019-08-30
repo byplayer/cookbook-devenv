@@ -28,6 +28,7 @@
   devenv::_python
   devenv::_emacs
   devenv::_fzf
+  devenv::_boost
 ].each do |recipe|
   include_recipe recipe
 end
