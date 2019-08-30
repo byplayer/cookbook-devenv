@@ -25,5 +25,5 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
     ln -s boost_#{node['boost']['version']&.tr('.', '_')} boost
   COMMAND
 
-  not_if "test -d #{File.join(node['boost']['install_base'], boost_#{node['boost']['version']&.tr('.', '_'))}"
+  not_if "test -d #{File.join(node['boost']['install_base'], boost_#{node['boost']['version']&.tr('.', '_')}"
 end
