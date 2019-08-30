@@ -6,7 +6,6 @@ remote_file "#{Chef::Config['file_cache_path']}/boost_#{node['boost']['version']
   not_if "test -f #{Chef::Config['file_cache_path']}/boost_#{node['boost']['version']&.tr('.', '_')}.tar.gz"
 end
 
-
 execute "Extracting and Building boost #{node['boost']['version']} from source" do
   cwd node['boost']['install_base']
   command <<-COMMAND
@@ -25,5 +24,5 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
     ln -s boost_#{node['boost']['version']&.tr('.', '_')} boost
   COMMAND
 
-  not_if "test -d #{File.join(node['boost']['install_base'], boost_#{node['boost']['version']&.tr('.', '_')}"
+  not_if "test -d #{File.join(node['boost']['install_base'], 'boost_' + node['boost']['version']&.tr('.', '_'))}"
 end
