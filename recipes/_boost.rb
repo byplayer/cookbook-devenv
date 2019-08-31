@@ -14,8 +14,8 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
       rm #{File.join(node['boost']['install_base'], 'boost')}
     fi
 
-    if [ -d #{boost_#{node['boost']['version']&.tr('.', '_')} ]; then
-      rm -r #{boost_#{node['boost']['version']&.tr('.', '_')}
+    if [ -d boost_#{node['boost']['version']&.tr('.', '_')} ]; then
+      rm -r boost_#{node['boost']['version']&.tr('.', '_')}
     fi
 
     tar xzf #{Chef::Config['file_cache_path']}/boost_#{node['boost']['version']&.tr('.', '_')}.tar.gz
