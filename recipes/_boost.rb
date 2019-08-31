@@ -8,11 +8,10 @@ end
 
 install_dir = File.join(node['boost']['install_base'], 'boost_' + node['boost']['version']&.tr('.', '_'))
 execute "Extracting and Building boost #{node['boost']['version']} from source" do
-  cwd node['boost']['install_base']
   cwd Chef::Config['file_cache_path']
   command <<-COMMAND
-    if [ -L #{File.join(node['boost']['install_base'], boost)} ]; then
-      rm #{File.join(node['boost']['install_base'], boost)}
+    if [ -L #{File.join(node['boost']['install_base'], 'boost')} ]; then
+      rm #{File.join(node['boost']['install_base'], 'boost')}
     fi
 
     if [ -d #{boost_#{node['boost']['version']&.tr('.', '_')} ]; then
