@@ -21,7 +21,6 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
     tar xzf #{Chef::Config['file_cache_path']}/boost_#{node['boost']['version']&.tr('.', '_')}.tar.gz
     cd boost_#{node['boost']['version']&.tr('.', '_')}
     ./bootstrap.sh --with-toolset=gcc
-    ./b2 --prefix=#{install_dir} headers
     ./b2 toolset=gcc -link=static,shared runtime-link=shared threading=multi variant=release --prefix=#{install_dir} --libdir=#{File.join(install_dir, '/lib/gcc')} install
     rm -r stage
     ./b2 toolset=clang -link=static,shared runtime-link=shared threading=multi variant=release --prefix=#{install_dir} --libdir=#{File.join(install_dir, '/lib/clang')} install
