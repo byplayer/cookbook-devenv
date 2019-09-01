@@ -25,6 +25,7 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
 
     pushd #{install_dir}/include
     sudo ln -s boost-#{node['boost']['version'].split('.').slice(0, 2).join('_')}/boost boost
+    popd
 
     cp boost.png #{install_dir}/
     cp index.html #{install_dir}/
