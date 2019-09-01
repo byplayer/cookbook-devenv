@@ -14,17 +14,16 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
       rm #{File.join(node['boost']['install_base'], 'boost')}
     fi
 
-    if [ -d boost_#{node['boost']['version']&.tr('.', '_')} ]; then
-      rm -r boost_#{node['boost']['version']&.tr('.', '_')}
+    if [ ! -d boost_#{node['boost']['version']&.tr('.', '_')} ]; then
+      tar xzf #{Chef::Config['file_cache_path']}/boost_#{node['boost']['version']&.tr('.', '_')}.tar.gz
     fi
 
-    tar xzf #{Chef::Config['file_cache_path']}/boost_#{node['boost']['version']&.tr('.', '_')}.tar.gz
     cd boost_#{node['boost']['version']&.tr('.', '_')}
     ./bootstrap.sh --with-toolset=gcc
     ./b2 toolset=gcc,clang -link=static,shared runtime-link=shared threading=multi variant=release,debug --prefix=#{install_dir} --layout=versioned install
 
     pushd #{install_dir}/include
-    sudo ln -s boost-#{node['boost']['version'].split('.').slice(0, 2).join('_')}/boost boost
+    ln -s boost-#{node['boost']['version'].split('.').slice(0, 2).join('_')}/boost boost
     popd
 
     cp boost.png #{install_dir}/
