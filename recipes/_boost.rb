@@ -22,10 +22,6 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
     ./bootstrap.sh --with-toolset=gcc
     ./b2 toolset=gcc,clang -link=static,shared runtime-link=shared threading=multi variant=release,debug --prefix=#{install_dir} --layout=versioned install
 
-    pushd #{install_dir}/include
-    ln -s boost-#{node['boost']['version'].split('.').slice(0, 2).join('_')}/boost boost
-    popd
-
     cp boost.png #{install_dir}/
     cp index.html #{install_dir}/
     cp -r doc #{install_dir}/
@@ -35,4 +31,9 @@ execute "Extracting and Building boost #{node['boost']['version']} from source" 
   COMMAND
 
   not_if "test -d #{install_dir}"
+end
+
+link File.join(install_dir, 'include', 'boost') do
+  to File.join(install_dir, 'include',
+               "boost-#{node['boost']['version'].split('.').slice(0, 2).join('_')}/boost")
 end
