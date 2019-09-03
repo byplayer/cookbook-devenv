@@ -190,6 +190,9 @@ end
 bash 'copy member list' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
+
   code <<-EOH
     if [ -f /vagrant/user_data/.members ]; then
       cp /vagrant/user_data/.members #{devenv_user_home}/.members
@@ -201,6 +204,8 @@ end
 bash 'setup emacs hooks' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     cd .emacs.d
@@ -212,6 +217,8 @@ end
 bash 'ruby tool' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     cd .ruby_tool
@@ -222,6 +229,9 @@ end
 bash 'pyton tool' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
+
   code <<-EOH
     cd .python_tool
     ./install.sh
@@ -245,7 +255,9 @@ end
 bash 'install sdkman' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
   environment ({ 'HOME' => devenv_user_home })
+
   code <<-EOH
     curl -s "https://get.sdkman.io" | bash
   EOH
