@@ -36,7 +36,8 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
    .git-extensions
    .ruby_tool
    .node_tool
-   .highlight].each do |name|
+   .highlight
+   .python_tool].each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']
     reference node['devenv'][name]['ref']
@@ -214,6 +215,15 @@ bash 'ruby tool' do
 
   code <<-EOH
     cd .ruby_tool
+    ./install.sh
+  EOH
+end
+
+bash 'pyton tool' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+  code <<-EOH
+    cd .python_tool
     ./install.sh
   EOH
 end
