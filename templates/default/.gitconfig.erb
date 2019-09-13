@@ -8,10 +8,10 @@
 	sm = submodule
 	ci = commit
 	cia = commit --amend
-	l = ! git log --color | emojify | less
-	lo = ! git log --oneline --color | emojify | less
-	lg = ! git log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<<%= '%' %>an>%Creset' --abbrev-commit --date=short --branches --color | emojify | less
-	lga = ! git log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<<%= '%' %>an>%Creset' --abbrev-commit --date=short --branches --all --color | emojify | less
+	l = log --color
+	lo = log --oneline --color
+	lg = log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<%an>%Creset' --abbrev-commit --date=short --branches --color
+	lga = log --graph --pretty=format:'%C(yellow)%h%C(green)%d%Creset %s %Cblue[%ad]%C(bold blue)<%an>%Creset' --abbrev-commit --date=short --branches --all --color
 	dt = difftool
 	dc = diff --check
 	mt = mergetool
@@ -45,7 +45,7 @@
 	signingkey = <%= @git_signing_key %>
 
 [pager]
-  log = diff-highlight | less
+  log = diff-highlight | emojify | less
   show = diff-highlight | less
   diff = diff-highlight | less
 
