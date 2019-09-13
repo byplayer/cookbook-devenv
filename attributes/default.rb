@@ -63,6 +63,7 @@ default['global']['configure_opt'] = '--with-universal-ctags=/opt/universal-ctag
 
 # updatedb
 default['updatedb']['locate_pkg'] = 'mlocate'
+default['updatedb']['prunenames'] = '.git .bzr .hg .svn .cache cache'
 
 # go
 default['go']['version'] = '1.12.1'
