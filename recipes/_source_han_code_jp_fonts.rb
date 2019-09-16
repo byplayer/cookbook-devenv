@@ -9,7 +9,7 @@ download_path = File.join(Chef::Config['file_cache_path'], archive_name)
 install_dir = node['source_han_code_jp_conts']['install_dir']
 
 remote_file download_path do
-  source 'https://github.com/adobe-fonts/source-han-code-jp/archive/#{version}.tar.gz'
+  source "https://github.com/adobe-fonts/source-han-code-jp/archive/#{version}.tar.gz"
   mode 0o0644
   not_if "test -f #{download_path}"
 end
