@@ -22,5 +22,5 @@ execute 'install source han code jp fonts' do
     fc-cache -fv
   COMMAND
 
-  not_if 'ls #{install_dir} | grep SourceHanCodeJP'
+  not_if "ls #{install_dir} | grep SourceHanCodeJP"
 end
