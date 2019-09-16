@@ -106,3 +106,7 @@ default['boost']['version'] = '1.71.0'
 #   node['boost']['install_base']/boost
 #   node['boost']['install_base']/boost-${version}
 default['boost']['install_base'] = '/opt'
+
+# source han code jp fonts
+default['source_han_code_jp_conts']['version'] = '2.011R'
+default['source_han_code_jp_conts']['install_dir'] = '/usr/local/share/fonts'
