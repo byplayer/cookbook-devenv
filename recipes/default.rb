@@ -12,7 +12,6 @@
 %w[
   golang
   golang::packages
-  devenv::_emojify
   devenv::_freemind
   devenv::_network
   devenv::_locales
