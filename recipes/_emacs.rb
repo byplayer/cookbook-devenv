@@ -13,12 +13,15 @@ execute "Extracting and Building emacs #{node['emacs']['version']} from Source" 
       rm -f emacs-#{node['emacs']['version']}
     fi
 
+    if [ -d #{node['emacs']['install_dir']} ]; then
+      rm -rf #{node['emacs']['install_dir']}
+    fi
+
     tar xzf emacs-#{node['emacs']['version']}.tar.gz
     cd emacs-#{node['emacs']['version']}
     ./configure --prefix=#{node['emacs']['install_dir']}
     make
     make install
   COMMAND
-  creates "#{node['emacs']['install_dir']}/bin/emacs"
   not_if "#{node['emacs']['install_dir']}/bin/emacs --version | grep #{node['emacs']['version']}"
 end
