@@ -27,7 +27,6 @@
   devenv::_python
   devenv::_emacs
   devenv::_fzf
-  devenv::_boost
   devenv::_source_han_code_jp_fonts
 ].each do |recipe|
   include_recipe recipe
