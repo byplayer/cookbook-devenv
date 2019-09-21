@@ -97,3 +97,9 @@ default['fzf']['install_target'] = '/opt/fzf'
 # source han code jp fonts
 default['source_han_code_jp_conts']['version'] = '2.011R'
 default['source_han_code_jp_conts']['install_dir'] = '/usr/local/share/fonts'
+
+# unco
+default['unco']['repo'] = 'https://github.com/byplayer/unco.git'
+default['unco']['ref'] = 'master'
+default['unco']['install_target'] = '/opt/unco'
+default['unco']['version'] = '0.2.0'
