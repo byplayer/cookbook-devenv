@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 name             'devenv'
 maintainer       'byplayer'
 maintainer_email 'byplayer100@gmail.com'
@@ -10,6 +12,6 @@ version          '0.1.0'
    docker docker_compose
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   golang rbenv trash-cli kubectl].each do |cookbook|
+   golang rbenv kubectl].each do |cookbook|
   depends cookbook
 end
