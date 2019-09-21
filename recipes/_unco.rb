@@ -9,7 +9,7 @@ end
 execute 'install unco' do
   cwd File.join(Chef::Config['file_cache_path'], 'unco')
   command <<-COMMAND
-    cmake .
+    cmake -DCMAKE_INSTALL_PREFIX=#{node['unco']['install_target']}
     make preinstall
     cmake -DCMAKE_INSTALL_PREFIX=#{node['unco']['install_target']} -P cmake_install.cmake
     make clean
