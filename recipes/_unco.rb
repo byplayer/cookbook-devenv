@@ -6,7 +6,7 @@ git File.join(Chef::Config['file_cache_path'], 'unco') do
   action :sync
 end
 
-execute 'install fzf' do
+execute 'install unco' do
   cwd File.join(Chef::Config['file_cache_path'], 'unco')
   command <<-COMMAND
     cmake .
