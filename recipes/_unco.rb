@@ -17,4 +17,3 @@ execute 'install unco' do
 
   not_if "#{node['unco']['install_target']}/bin/unco --version | grep #{node['unco']['version']}"
 end
-n
