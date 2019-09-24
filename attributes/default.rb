@@ -103,3 +103,8 @@ default['unco']['repo'] = 'https://github.com/byplayer/unco.git'
 default['unco']['ref'] = 'master'
 default['unco']['install_target'] = '/opt/unco'
 default['unco']['version'] = '0.2.0'
+
+# local_tools
+default['local_tools']['repo'] = 'https://github.com/byplayer/local_tools.git'
+default['local_tools']['ref'] = 'master'
+default['local_tools']['install_target'] = '/opt/local_tools'
