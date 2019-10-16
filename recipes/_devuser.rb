@@ -200,6 +200,20 @@ bash 'copy member list' do
   EOH
 end
 
+bash 'copy org-gcal configuration' do
+  cwd devenv_user_home
+  user node['devenv']['user']['name']
+  group node['devenv']['user']['name']
+  environment ({ 'HOME' => devenv_user_home })
+
+  code <<-EOH
+    if [ -f /vagrant/user_data/.org-gcal/org-gcal-conf.el ]; then
+      mkdir -p #{devenv_user_home}/.org-gcal
+      cp /vagrant/user_data/.org-gcal/org-gcal-conf.el #{devenv_user_home}/.org-gcal/
+    fi
+  EOH
+end
+
 # emacs env
 bash 'setup emacs hooks' do
   cwd devenv_user_home
