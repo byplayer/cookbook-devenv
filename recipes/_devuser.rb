@@ -53,13 +53,14 @@ end
 %w[
   .dir_colors .globalrc .ctags.d/kotlin.ctags .prettierrc
   .tmux.conf
-  .Xresources .gitconfig .xprofile .zshrc
+  .Xresources .xprofile .zshrc
   .gitcommit_template.txt
   .xscreensaver .xinputrc .dconf.conf
   .config/openbox/lxqt-rc.xml
   .config/lxqt/panel.conf
   .config/qterminal.org/qterminal.ini
   .config/gtk-3.0/settings.ini
+  .config/git/config
   .xkbmaprc.tpl
   .gnupg/gpg.conf
 ].each do |name|
