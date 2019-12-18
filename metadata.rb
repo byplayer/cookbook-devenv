@@ -12,6 +12,7 @@ version          '0.1.0'
    docker docker_compose
    updatedb
    the_silver_searcher apt-repo heroku-toolbelt
-   golang rbenv kubectl].each do |cookbook|
+   golang rbenv kubectl
+   yarn].each do |cookbook|
   depends cookbook
 end
