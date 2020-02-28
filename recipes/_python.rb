@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-pyenv_plugin node['devenv']['user']['name']
+pyenv_user_install node['devenv']['user']['name']
