@@ -25,7 +25,6 @@
   devenv::_devuser
   devenv::_node
   devenv::_vbox-guest-utils
-  devenv::_python
   devenv::_emacs
   devenv::_fzf
   devenv::_unco

@@ -92,12 +92,6 @@
   postfix
   postgresql
   postgresql-client
-  pylint3
-  python-xlib
-  python3-pip
-  python3-pytest-pylint
-  python3-sphinx
-  python3-sphinxcontrib.plantuml
   qemu-kvm
   qt4-qmake
   rdtool-elisp
