@@ -30,6 +30,7 @@
   devenv::_unco
   devenv::_source_han_code_jp_fonts
   devenv::_local_tools
+  devenv::_python
 ].each do |recipe|
   include_recipe recipe
 end
