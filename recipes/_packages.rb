@@ -55,7 +55,6 @@
   libncurses5-dev
   libncurses5:i386
   libpq-dev
-  libqt4-dev
   libreadline-dev
   libsnappy-dev
   libsqlite3-dev
@@ -98,8 +97,6 @@
   python3-pytest-pylint
   python3-sphinx
   python3-sphinxcontrib.plantuml
-  qemu-kvm
-  qt4-qmake
   rdtool-elisp
   rlwrap
   saidar
