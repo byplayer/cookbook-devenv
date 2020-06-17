@@ -25,12 +25,12 @@
   devenv::_devuser
   devenv::_node
   devenv::_vbox-guest-utils
-  devenv::_python
   devenv::_emacs
   devenv::_fzf
   devenv::_unco
   devenv::_source_han_code_jp_fonts
   devenv::_local_tools
+  devenv::_python
 ].each do |recipe|
   include_recipe recipe
 end
