@@ -12,6 +12,7 @@ end
 # .gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.erb
 %W[
   #{devenv_user_home}/.config
+  #{devenv_user_home}/.config/git
   #{devenv_user_home}/.config/openbox
   #{devenv_user_home}/.config/lxqt
   #{devenv_user_home}/.config/qterminal.org
