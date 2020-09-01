@@ -82,7 +82,7 @@ default['devenv']['user']['knife_key'] = nil
 default['kubectl']['version'] = '1.12.3'
 
 # emacs
-default['emacs']['version'] = '26.2'
+default['emacs']['version'] = '27.1'
 default['emacs']['install_dir'] = '/opt/emacs'
 
 # freemind
