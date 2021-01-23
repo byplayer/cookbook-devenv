@@ -37,11 +37,6 @@ default['devenv']['.highlight']['ref'] = 'master'
 default['devenv']['.highlight']['checkout_branch'] = nil
 default['devenv']['.highlight']['enable_checkout'] = false
 
-default['devenv']['.python_tool']['repo'] = 'https://github.com/byplayer/python_tool.git'
-default['devenv']['.python_tool']['ref'] = 'master'
-default['devenv']['.python_tool']['checkout_branch'] = nil
-default['devenv']['.python_tool']['enable_checkout'] = false
-
 default['devenv']['git']['user_name'] = 'devuser'
 default['devenv']['git']['user_email'] = 'devuser@hogehoge.hogehoge'
 

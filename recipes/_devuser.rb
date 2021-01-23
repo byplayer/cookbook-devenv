@@ -37,8 +37,7 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
    .git-extensions
    .ruby_tool
    .node_tool
-   .highlight
-   .python_tool].each do |name|
+   .highlight].each do |name|
   git "#{devenv_user_home}/#{name}" do
     repository node['devenv'][name]['repo']
     reference node['devenv'][name]['ref']
@@ -193,7 +192,7 @@ bash 'copy member list' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+  environment({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     if [ -f /vagrant/user_data/.members ]; then
@@ -206,7 +205,7 @@ bash 'copy org-gcal configuration' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+  environment({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     if [ -f /vagrant/user_data/.org-gcal/org-gcal-conf.el ]; then
@@ -221,7 +220,7 @@ bash 'setup emacs hooks' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+  environment({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     cd .emacs.d
@@ -234,22 +233,10 @@ bash 'ruby tool' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+  environment({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     cd .ruby_tool
-    ./install.sh
-  EOH
-end
-
-bash 'pyton tool' do
-  cwd devenv_user_home
-  user node['devenv']['user']['name']
-  group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
-
-  code <<-EOH
-    cd .python_tool
     ./install.sh
   EOH
 end
@@ -259,7 +246,7 @@ bash 'install node tool' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+  environment({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     cd .node_tool
@@ -272,7 +259,7 @@ bash 'install sdkman' do
   cwd devenv_user_home
   user node['devenv']['user']['name']
   group node['devenv']['user']['name']
-  environment ({ 'HOME' => devenv_user_home })
+  environment({ 'HOME' => devenv_user_home })
 
   code <<-EOH
     curl -s "https://get.sdkman.io" | bash
