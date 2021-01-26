@@ -8,32 +8,32 @@ default['devenv']['user']['ssh_key_file'] = nil
 default['devenv']['user']['ssh_authorized_keys'] = nil
 
 default['devenv']['.zsh.d']['repo'] = 'https://github.com/byplayer/dot.zsh.d.git'
-default['devenv']['.zsh.d']['ref'] = 'master'
+default['devenv']['.zsh.d']['ref'] = 'main'
 default['devenv']['.zsh.d']['checkout_branch'] = nil
 default['devenv']['.zsh.d']['enable_checkout'] = false
 
 default['devenv']['.emacs.d']['repo'] = 'https://github.com/byplayer/dot.emacs.d.git'
-default['devenv']['.emacs.d']['ref'] = 'master'
+default['devenv']['.emacs.d']['ref'] = 'main'
 default['devenv']['.emacs.d']['checkout_branch'] = nil
 default['devenv']['.emacs.d']['enable_checkout'] = false
 
 default['devenv']['.git-extensions']['repo'] = 'https://github.com/muratayusuke/git-extensions.git'
-default['devenv']['.git-extensions']['ref'] = 'master'
+default['devenv']['.git-extensions']['ref'] = 'main'
 default['devenv']['.git-extensions']['checkout_branch'] = nil
 default['devenv']['.git-extensions']['enable_checkout'] = false
 
 default['devenv']['.ruby_tool']['repo'] = 'https://github.com/byplayer/ruby_tool.git'
-default['devenv']['.ruby_tool']['ref'] = 'master'
+default['devenv']['.ruby_tool']['ref'] = 'main'
 default['devenv']['.ruby_tool']['checkout_branch'] = nil
 default['devenv']['.ruby_tool']['enable_checkout'] = false
 
 default['devenv']['.node_tool']['repo'] = 'https://github.com/byplayer/node_tool.git'
-default['devenv']['.node_tool']['ref'] = 'master'
+default['devenv']['.node_tool']['ref'] = 'main'
 default['devenv']['.node_tool']['checkout_branch'] = nil
 default['devenv']['.node_tool']['enable_checkout'] = false
 
 default['devenv']['.highlight']['repo'] = 'https://github.com/byplayer/dot.highlight.git'
-default['devenv']['.highlight']['ref'] = 'master'
+default['devenv']['.highlight']['ref'] = 'main'
 default['devenv']['.highlight']['checkout_branch'] = nil
 default['devenv']['.highlight']['enable_checkout'] = false
 
@@ -95,11 +95,11 @@ default['source_han_code_jp_conts']['install_dir'] = '/usr/local/share/fonts'
 
 # unco
 default['unco']['repo'] = 'https://github.com/byplayer/unco.git'
-default['unco']['ref'] = 'master'
+default['unco']['ref'] = 'main'
 default['unco']['install_target'] = '/opt/unco'
 default['unco']['version'] = '0.2.0'
 
 # local_tools
 default['local_tools']['repo'] = 'https://github.com/byplayer/local_tools.git'
-default['local_tools']['ref'] = 'master'
+default['local_tools']['ref'] = 'main'
 default['local_tools']['install_target'] = '/opt/local_tools'
