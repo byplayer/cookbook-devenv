@@ -17,7 +17,7 @@ default['devenv']['.emacs.d']['ref'] = 'main'
 default['devenv']['.emacs.d']['checkout_branch'] = nil
 default['devenv']['.emacs.d']['enable_checkout'] = false
 
-default['devenv']['.git-extensions']['repo'] = 'https://github.com/muratayusuke/git-extensions.git'
+default['devenv']['.git-extensions']['repo'] = 'https://github.com/byplayer/git-extensions.git'
 default['devenv']['.git-extensions']['ref'] = 'main'
 default['devenv']['.git-extensions']['checkout_branch'] = nil
 default['devenv']['.git-extensions']['enable_checkout'] = false
