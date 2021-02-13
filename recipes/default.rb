@@ -11,7 +11,6 @@
 
 %w[
   golang
-  golang::packages
   yarn::default
   devenv::_freemind
   devenv::_network
