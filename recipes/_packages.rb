@@ -15,6 +15,7 @@
   cmigemo
   cpanminus
   curl
+  dconf-editor
   dkms
   eblook lookup-el
   emacs-goodies-el
