@@ -51,6 +51,7 @@
   libgroonga-dev
   libgtk-3-dev
   libid3-dev
+  libgccjit-10-dev
   libmagickwand-dev
   libmcrypt-dev
   libncurses5-dev
