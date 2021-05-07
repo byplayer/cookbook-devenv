@@ -51,7 +51,7 @@ ENV['PATH'] = "/opt/git/bin:#{ENV['PATH']}"
 end
 
 %w[
-  .dir_colors .globalrc .ctags.d/kotlin.ctags .prettierrc
+  .dir_colors .globalrc .prettierrc
   .tmux.conf
   .Xresources .xprofile .zshrc
   .xscreensaver .xinputrc .dconf.conf
