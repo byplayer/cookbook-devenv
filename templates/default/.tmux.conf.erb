@@ -1,7 +1,7 @@
 # change prefix
 set-option -g prefix C-x
 bind C-x send-prefix
-unbind-key C-b
+unbind C-b
 
 # status
 set -g status-style fg=black,bg=white
@@ -20,20 +20,15 @@ set-option -g mouse on
 
 # sync clipboard
 # for linux
-if "which xclip" "bind-key -T copy-mode M-w send -X copy-pipe-and-cancel 'xclip -i -selection clipboard'"
-if "which xclip" "bind-key -n C-y run 'tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer'"
+if "which xclip" "bind -T copy-mode M-w send -X copy-pipe-and-cancel 'xclip -i -selection clipboard'"
+if "which xclip" "bind -n C-y run 'tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer'"
 
 #for mac
-if "which pbcopy" "bind-key -t emacs-copy M-w copy-pipe 'pbcopy'"
-if "which pbpaste" "bind-key -n C-y run 'tmux set-buffer -- \"$(pbpaste)\"; tmux paste-buffer'"
+if "which pbcopy" "bind -t emacs-copy M-w copy-pipe 'pbcopy'"
+if "which pbpaste" "bind -n C-y run 'tmux set-buffer -- \"$(pbpaste)\"; tmux paste-buffer'"
 
 # split
-bind-key h split-window -h
-bind-key v split-window
-
-# remove some key
-unbind-key {
-unbind-key }
-unbind-key C-o
+bind h split-window -h
+bind v split-window
 
 # set-option -g utf8-cjk on
