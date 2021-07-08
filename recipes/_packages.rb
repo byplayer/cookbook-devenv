@@ -25,6 +25,7 @@
   expect
   emacs
   exuberant-ctags
+  ffmpeg
   fonts-emojione
   fonts-takao-gothic
   gnome-terminal
