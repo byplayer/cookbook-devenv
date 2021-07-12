@@ -77,8 +77,11 @@ default['devenv']['user']['knife_key'] = nil
 default['kubectl']['version'] = '1.12.3'
 
 # emacs
-default['emacs']['version'] = '27.2'
+default['emacs']['git_repository'] = 'https://github.com/emacs-mirror/emacs.git'
+default['emacs']['git_revision'] = '352baac72fd4ab1050c66cd4b27ab54acc051e50'
+default['emacs']['revision'] = '28.0.50'
 default['emacs']['install_dir'] = '/opt/emacs'
+default['emacs']['configure_options'] = '--with-native-compilation '
 
 # freemind
 default['freemind']['version'] = '1.0.0'

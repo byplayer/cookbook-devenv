@@ -1,25 +1,17 @@
 # frozen_string_literal: true
 
-remote_file "#{Chef::Config['file_cache_path']}/emacs-#{node['emacs']['version']}.tar.gz" do
-  source    "http://ftp.jaist.ac.jp/pub/GNU/emacs/emacs-#{node['emacs']['version']}.tar.gz"
-  mode      0o0644
-  not_if "test -f #{Chef::Config['file_cache_path']}/emacs-#{node['emacs']['version']}.tar.gz"
+git ""#{Chef::Config['file_cache_path']}/emacs" do
+  repository node['emacs']['git_repository']
+  revision node['emacs']['git_revision']
+  action :sync
 end
 
-execute "Extracting and Building emacs #{node['emacs']['version']} from Source" do
+execute "Extracting and Building emacs #{node['emacs']['revision']}(#{node['emacs']['git_revision']}) from Source" do
   cwd Chef::Config['file_cache_path']
   command <<-COMMAND
-    if [ -d emacs-#{node['emacs']['version']} ]; then
-      rm -f emacs-#{node['emacs']['version']}
-    fi
-
-    if [ -d #{node['emacs']['install_dir']} ]; then
-      rm -rf #{node['emacs']['install_dir']}
-    fi
-
-    tar xzf emacs-#{node['emacs']['version']}.tar.gz
-    cd emacs-#{node['emacs']['version']}
-    ./configure --prefix=#{node['emacs']['install_dir']}
+    cd emacs
+    ./autogen.sh
+    ./configure --prefix=#{node['emacs']['install_dir']} #{node['emacs']['configure_options']}
     make
     make install
   COMMAND
