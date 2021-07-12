@@ -53,6 +53,7 @@
   libgtk-3-dev
   libid3-dev
   libgccjit-10-dev
+  libgccjit-9-dev
   libmagickwand-dev
   libmcrypt-dev
   libncurses5-dev
